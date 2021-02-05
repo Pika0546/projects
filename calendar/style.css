@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Londrina Solid', cursive;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.container{
+    background-image: linear-gradient(rgb(75, 75, 211), cyan);
+    height: 100%;
+    text-align: center;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h1{
+    color: whitesmoke;
+    margin: 0;
+    font-size: 60px;
+}
+
+h2{
+    color: white;
+    margin: 0;
+    font-size: 60px;
+}
+.grid-container{
+
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    border: 2px solid black;
+    
+}
+.grid-item{
+    background: white;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+}
+#left-icon{
+    position: absolute;
+    top:42%;
+    left: -80px;
+}
+#right-icon{
+    position: absolute;
+    top:42%;
+    right: -80px;
+}
+
+.angle-icon:hover{
+    cursor: pointer;
+}
+
+#return-button{
+    border: 2px solid black;
+    font-size: 30px;
+    padding: 20px 30px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition:  0.5s;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.699) 20%, cyan 80%);
+}
+
+#return-button:hover{
+    transform: scale(1.2);
+    
+}
+
+.date:hover{
+    
+    border: 2px solid black;
+    font-size: 40px;
+    color:white;
+    background-image: linear-gradient(rgb(78, 78, 221),rgba(0, 255, 255, 0.774));
+    
+}
+
+@media screen and (max-width: 1150px){
+    .DayOfWeek{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .grid-container{
+        margin: 0;
+        width: 100%;
+    }
+    #right-icon{
+        top: 105%;
+        right: 20%;
+    }
+    #left-icon{
+        top:105%;
+        left:20%;
+    }
+    .grid-item{
+        height: 50px;
+        font-size: 20px;
+        line-height: 50px;
+    }
+    #return-button{
+        font-size: 25px;
+        padding: 15px 15px;
+        margin: 23px auto;
+    }
+}
