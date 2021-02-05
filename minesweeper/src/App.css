@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    border-collapse: collapse;
+}
+
+/*toobar color : #4A752C */
+/*oddcell: #AAD751 */
+/*evencell: #A2D149 */
+/*oddcell-open: #E5C29F*/
+/*evencell-open: #D7B899*/
+
+html{
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    font-family: 'Acme', sans-serif;
+}
+
+button{
+    outline: none;
+    border: none;
+    background: none;
+}
+img{
+    display: inline-block;
+    width: 1.2rem;
+    height: auto;
+}
+
+.container{
+    margin-top: 30px;
+    position: relative;
+    /* border: 2px solid white; */
+   
+}
+
+/*======== GAME TITTLE==========*/
+.game-title{
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    background-color:#ff90c4 ;
+}
+
+/*======== TOOLBAR ============*/
+.toolbar{
+    padding:1rem  .5rem;
+    padding-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color:#ff90c4 ;
+}
+
+.game-info{
+    display: flex;
+    justify-content: space-around;
+    font-size: .9rem;
+    color:white;
+}
+
+.game-mode select{
+    padding: .2rem;
+    width: 4rem;
+    outline: none;
+    border-radius: .5rem;
+    border: none;
+    font-family: 'Acme', sans-serif;
+
+    font-size: .8rem;
+}
+
+
+
+.mine-number{
+    margin-right: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.mine-number span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+
+.time-container{
+    display: flex;
+    align-items: center;
+}
+
+.time-container span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.emoji-container{
+    display: flex;
+    align-items: center;
+   
+}
+
+.emoji{
+    cursor: pointer;
+}
+
+.emoji img{
+    width: 1.5rem;
+}
+
+
+/*=================GAME BOARD ==============*/
+
+.game-board{
+    
+    display: grid;
+    
+}
+
+.board0{
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    
+}
+
+.board1{
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    
+}
+
+.board2{
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    
+}
+
+.cell{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell span{
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    
+}
+
+.cell0{
+    width: 35px;
+    height: 35px;
+}
+
+.cell1{
+    width: 30px;
+    height: 30px;
+}
+
+.cell2{
+    width: 25px;
+    height: 25px;
+}
+
+.cell img{
+    width: 78%;
+    
+}
+.cell-odd{
+    background-color:  #fdeffa;
+}
+
+.cell-odd span{
+    background-color: #ffcbee;
+}
+
+.cell-even span{
+    background-color: #fcb6d9;
+}
+
+.cell-even{
+    background-color: #ffe0f5;
+}
+
+.cell.not-open:hover{
+    background-color: white;
+}
+
+
+
+
+.cell .number1{
+    color: #0100FC;
+}
+
+
+.cell .number2{
+    color: #017E00;
+}
+
+
+.cell .number3{
+    color: #FD0100;
+}
+
+
+.cell .number4{
+    color:#010082;
+}
+
+.cell .number5{
+    color:#810103;
+}
+
+.cell .number6{
+    color: #008080;
+}
+
+.cell .number7{
+    color: #000000;
+}
+
+.cell .number8{
+    color: #808080;
+}
+
+.cell.border-top{
+    border-top: 2px solid #ff008c;
+}
+
+.cell.border-bottom{
+    border-bottom: 2px solid #ff008c;
+}
+
+.cell.border-left{
+    border-left: 2px solid #ff008c;
+}
+
+.cell.border-right{
+    border-right: 2px solid #ff008c;
+}
+
+
+.start-screen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro{
+    padding: 20px;
+    position: relative;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.479);
+}
+
+.row1{
+    margin-bottom: 10px;
+
+}
+
+.row img{
+    width: 50px;
+   
+}
+
+.row img:first-child{
+    margin-right: 10px;
+}
+
+.close-intro{
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 100%;
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
+    background-color: rgb(0, 0, 0);
+}
+
+.message-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-content{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.main-message{
+    padding: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    color: white;
+   
+    background-color: #ff62bed8;
+}
+
+.main-message img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.sub-message{
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    color: white;
+}
+
+.sub-message img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+.restart-message{
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    margin:0 auto;
+    color: white;
+    font-size: 30px;
+    
+    background: rgba(0, 0, 0, 0.685);
+}
+
+.restart-message i{
+    transition: all .15s;
+}
+
+.restart-message:hover i{
+    transform: rotate(-270deg);
+}
+
+@media screen and (max-width: 530px){
+    
+    .cell2{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 470px){
+    
+    .cell1{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    html{
+        font-size: 13px;
+    }
+    .cell0{
+        width: 25px;
+        height: 25px;
+    }
+    .cell1{
+        width: 22px;
+        height: 22px;
+    }
+    .cell2{
+        width: 17px;
+        height: 17px;
+    }
+    
+}
+
+@media screen and (max-width: 350px){
+    
+    .cell1{
+        width: 20px;
+        height: 20px;
+    }
+    .cell2{
+        width: 15px;
+        height: 15px;
+    }
+}
+
