@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 by Dang Khoa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="game-container">
+        <h1>2048 by Dang Khoa</h1>
+        <div id="score">
+            
+        </div>
+        
+        <div id="game">
+            <div id="game-over">
+                <p>Game Over</p>
+            </div>
+            <div id="victory">
+                <p>VICTORY</p>
+            </div>
+        </div>
+
+        <div class="btn-container">
+          
+           <div class="up-container">
+                <button id="up" class="move-btn" onclick="floatUp()">UP</button>
+            </div>
+            <div class="left-right-container">
+                <button id="left" class="move-btn" onclick="floatLeft()">LEFT</button>
+                <button id="right" class="move-btn" onclick="floatRight()">RIGHT</button>
+            </div>
+           
+            <div class="down-container">
+                <button id="down" class="move-btn" onclick="floatDown()">DOWN</button>
+            </div>
+            <div id="restart" onclick="init()">
+               <button>RESTART</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
