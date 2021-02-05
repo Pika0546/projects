@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pika Cupcake</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGjfC25S_324Wbdd0_qJUWxFzPaoOeKeI&callback=initMap&libraries=&v=weekly"
+        defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="brand">
+            <div class="brand__logo">
+                <div class="logo">
+                    <img src="img/logo.webp" alt="Logo">
+                </div>
+                <div class="name-container">
+                    <svg height="40" width='200'>
+                        <path fill="white"
+                            d="M42 29 c-3.2 -.4 -6.2 .4 -9.4.6-1.4.1-3.1.5-3.7-.7-.3-.6-.2-1.8-.3-2.4-.5-4.4-.7-9-1.7-13.3-.1-.6-.7-.8-1.2-.7h-.4c-4.1.5-8.2 1-12.3 1.4-1.5.1-4.9.1-5 2.5-.1 1.9 2.7 3.1 4 4.1 1.4 1.1 2.8 2.6 4.5 3.4-2.3 2.9-5 5.4-7.6 8-.6.7-.2 1.6.6 1.7 10.9 1.5 21.9 2.9 32.7.3.4-.1.7-.5.8-.9 0-1 .1-2 .1-3-.1-.6-.5-.9-1.1-1z">
+                        </path>
+                        <path fill="white"
+                            d="M192 16.2 c.2-.6-.3-1.3-.9-1.3-3.8.1-7.3-.5-11.1-1.2-2.3-.4-4.3-.4-6.5.6-.7.3-.6 1-.3 1.4-.2 4.4-.6 8.7-1.1 13-3.7.2-7.5.4-11.2.6-.6 0-.9.4-1 1-.2 1.6-.4 3.2-.3 4.8 0 .5.4 1 1 1 10.2-.4 20.4 3.1 30.4-.3.6-.2 1-.8.6-1.4-1.8-3.5-4.1-6.6-7-9.3 3.4-1.9 5.9-5 7.4-8.9z">
+                        </path>
+                        <path fill="white"
+                            d="M170.2 26.7 c.4-5.1 1.6-10.8 1.1-15.9-.4-4.1-3.1-3.5-6.6-3.7-11.6-.6-23.1-1.8-34.7-2.5-21.5-1.4-42.9-2.4-64.4-1.8-11.7.3-23.4 1-35.1 2.2-.4 0-.6.2-.7.5 0 .1-.1.2 0 .4.4 6.6.5 13.3.9 19.9 0 .5.4 1 1 1 10.5.4 21.1.9 31.7.9 5.6 0 11.1-.6 16.7-1 5.7-.3 11.5-.2 17.3 0 11.8.5 23.6 1.4 35.4 1.5 12.1.1 24.3-.2 36.4-.6.5 0 .9-.3 1-.9z">
+                        </path>
+                    </svg>
+                    <div class="brand__name">
+                        Pika Cupcake
+                    </div>
+                </div>
+            </div>
+            <div class="brand__subname">
+                And All Things Nice
+            </div>
+            <div class="login-btn">
+                <i class="fas fa-user-circle"></i>
+                <span>Login</span>
+            </div>
+        </div>
+        <button class="open-nav nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="navigation">
+            <button class="close-nav nav-toggle">
+                &times;
+            </button>
+
+            <ul>
+                <li><button class="nav-btn" id="home-btn" onclick="changeSection('home')">HOME</button></li>
+                <li><button class="nav-btn" id="about-btn" onclick="changeSection('about')">ABOUT</button></li>
+                <li><button class="nav-btn" id="menu-btn" onclick="changeSection('menu')">MENU</button></li>
+                <li><button class="nav-btn" id="order-online-btn" onclick="changeSection('order-online')">ORDER
+                        ONLINE</button></li>
+                <li><button class="nav-btn" id="contact-btn" onclick="changeSection('contact')">CONTACT</button></li>
+                <li><button class="nav-btn" id="workshops-btn" onclick="changeSection('workshops')">WORKSHOPS</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="home-secion section" id="home">
+        <div class="main-slide">
+            <div class="main-slide__content">
+                <div class="slide">
+                    <div class="slide__number">
+                        1/3
+                    </div>
+                    <img src="img/cupcake1.webp" alt="">
+                </div>
+                <div class="slide">
+                    <div class="slide__number">
+                        2/3
+                    </div>
+                    <img src="img/cupcake2.webp" alt="">
+                </div>
+                <div class="slide">
+                    <div class="slide__number">
+                        3/3
+                    </div>
+                    <img src="img/cupcake3.webp" alt="">
+                </div>
+            </div>
+            <button class="main-slide__btn" id="prev" onclick="plusSlide(-1)">&#10094;</button>
+            <button class="main-slide__btn" id="next" onclick="plusSlide(1)">&#10095;</button>
+        </div>
+        <div class="sub-slide owl-carousel">
+            <div class="item">
+                <img src="img/menuItem1.webp" alt="">
+            </div>
+            <div class="item">
+                <img src="img/menuItem2.webp" alt="">
+            </div>
+            <div class="item">
+                <img src="img/menuItem3.webp" alt="">
+            </div>
+            <div class="item">
+                <img src="img/menuItem4.webp" alt="">
+            </div>
+            <div class="item">
+                <img src="img/menuItem5.webp" alt="">
+            </div>
+            <div class="item">
+                <img src="img/menuItem6.webp" alt="">
+            </div>
+        </div>
+        <div class="link-to">
+            <div class="star">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="link__container">
+                <div class="link__item">
+                    <img src="img/logo1.webp" alt="">
+                    <h3 class="heading">Like & <br> follow</h3>
+                    <div class="link__link">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""> <i class="fab fa-foursquare"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="link__item">
+                    <img src="img/logo.webp" alt="">
+                    <h3 class="heading">ORDER <br> Online</h3>
+                    <div class="link__link">
+                        <a href="#" onclick="changeSection('order-online')">Click here</a>
+                    </div>
+                </div>
+                <div class="link__item">
+                    <img src="img/logo2.webp" alt="">
+                    <h3 class="heading">Come <br> visit us</h3>
+                    <div class="link__link">
+                        <a href="#" onclick="changeSection('contact')">View map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section section" id="about">
+        <div class="about__content">
+            <div class="about__img">
+                <img src="img/aboutImg.webp" alt="">
+            </div>
+            <div class="about__text">
+                <h3 class="heading">our story</h3>
+                <p>
+                    This is a great space to write long text about your
+                    company and your services. You can use this space to go
+                    into a little more detail about your company. Talk about
+                    your team and what services you provide. Tell your visitors
+                    the story of how you came up with the idea for your business and
+                    what makes you different from your competitors. Make your company
+                    stand out and show your visitors who you are.
+                </p>
+                <p>
+                    This is a great space to write long text about your
+                    company and your services. You can use this space to go
+                    into a little more detail about your company. Talk about
+                    your team and what services you provide. Tell your visitors
+                    the story of how you came up with the idea for your business and
+                    what makes you different from your competitors. Make your company
+                    stand out and show your visitors who you are.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+        <div class="menu__header">
+            <h3 class="heading">Flavors</h3>
+            <p>
+                This is a section of your menu. Give your section a brief description
+            </p>
+        </div>
+        <div class="menu__content">
+            <div class="menu__item">
+                <div class="product">
+                    <img src="img/menuItem1.webp" alt="">
+                    <div class="name">
+                        <h3>
+                            SUGAR FREE DOUBLE CHOCOLATE
+                        </h3>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="description">
+                        <p>This is an item on your menu. Give your item a brief description</p>
+                    </div>
+                    <div class="price">
+                        $9
+                    </div>
+                    <div class="others">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="menu__item">
+                <div class="product">
+                    <img src="img/menuItem2.webp" alt="">
+                    <div class="name">
+                        <h3>SUGAR FREE CHOCOLATE VANILLA</h3>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="description">
+                        <p>This is an item on your menu. Give your item a brief description</p>
+                    </div>
+                    <div class="price">
+                        $9
+                    </div>
+                    <div class="others">
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <div class="product">
+                    <img src="img/menuItem3.webp" alt="">
+                    <div class="name">
+                        <h3>GLUTEN FREE RED VELVE</h3>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="description">
+                        <p>This is an item on your menu. Give your item a brief description</p>
+                    </div>
+                    <div class="price">
+                        $9
+                    </div>
+                    <div class="others">
+                        <img src="img/gluten-free.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <div class="product">
+                    <img src="img/menuItem4.webp" alt="">
+                    <div class="name">
+                        <h3>DOUBLE CHOCOLATE</h3>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="description">
+                        <p>This is an item on your menu. Give your item a brief description</p>
+                    </div>
+                    <div class="price">
+                        $9
+                    </div>
+                    <div class="others">
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <div class="product">
+                    <img src="img/menuItem5.webp" alt="">
+                    <div class="name">
+                        <h3>CHOCOLATE VANILLA</h3>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="description">
+                        <p>This is an item on your menu. Give your item a brief description</p>
+                    </div>
+                    <div class="price">
+                        $9
+                    </div>
+                    <div class="others">
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu__item">
+                <div class="product">
+                    <img src="img/menuItem6.webp" alt="">
+                    <div class="name">
+                        <h3>CLASSIC RED VELVET</h3>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="description">
+                        <p>This is an item on your menu. Give your item a brief description</p>
+                    </div>
+                    <div class="price">
+                        $9
+                    </div>
+                    <div class="others">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="order-online-section section" id="order-online">
+        <div class="anounce">
+            <p>Sorry, online ordering is currently closed. We’re not taking orders right now.</p>
+        </div>
+        <div class="order-online__content">
+            <div class="guest-info order-online__content__right">
+                <div class="info">
+                    <i class="fas fa-user-circle"></i>
+                    <p>Hi, Guest</p>
+                </div>
+                <div class="menu-types">
+                    <h4 id="order-menu-types">
+                        <span>MENU</span>
+                        <i id="show-menu-list-icon" class="fas fa-chevron-up"></i>
+                    </h4>
+                    <ul id="menu-type-list">
+                        <li>FLAVORS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-menu">
+                <div class="order-menu__heading">
+                    <h4 class="order-menu__heading--1">
+                        Menu
+                    </h4>
+                    <h3 class="heading">
+                        FLAVORS
+                    </h3>
+                    <p>This is a section of your menu. Give your section a brief description</p>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-grid__item product-1">
+                        <div class="background">
+
+                        </div>
+                        <div class="info">
+                            <div class="name">
+                                <p>GLUTEN FREE RED VELVET</p>
+                            </div>
+                            <div class="price">
+                                <p>$9</p>
+                            </div>
+                            <div class="detail">
+                                <p>This is an item on your menu. Give your item a brief description</p>
+                            </div>
+                        </div>
+                        <div class="others">
+                            <img src="img/gluten-free.webp" alt="">
+                            <p>+</p>
+                        </div>
+                    </div>
+                    <div class="menu-grid__item product-2">
+                        <div class="background">
+
+                        </div>
+                        <div class="info">
+                            <div class="name">
+                                <p>SUGAR FREE CHOCOLATE VANILLA</p>
+                            </div>
+                            <div class="price">
+                                <p>$9</p>
+                            </div>
+                            <div class="detail">
+                                <p>This is an item on your menu. Give your item a brief description</p>
+                            </div>
+                        </div>
+                        <div class="others">
+                            <p>+</p>
+                        </div>
+                    </div>
+                    <div class="menu-grid__item product-3">
+                        <div class="background">
+
+                        </div>
+                        <div class="info">
+                            <div class="name">
+                                <p>SUGAR FREE DOUBLE CHOCOLATE</p>
+                            </div>
+                            <div class="price">
+                                <p>$9</p>
+                            </div>
+                            <div class="detail">
+                                <p>This is an item on your menu. Give your item a brief description</p>
+                            </div>
+                        </div>
+                        <div class="others">
+                            <p>+</p>
+                        </div>
+                    </div>
+                    <div class="menu-grid__item product-4">
+                        <div class="background">
+
+                        </div>
+                        <div class="info">
+                            <div class="name">
+                                <p>DOUBLE CHOCOLATE</p>
+                            </div>
+                            <div class="price">
+                                <p>$9</p>
+                            </div>
+                            <div class="detail">
+                                <p>This is an item on your menu. Give your item a brief description</p>
+                            </div>
+                        </div>
+                        <div class="others">
+                            <p>+</p>
+                        </div>
+                    </div>
+                    <div class="menu-grid__item product-5">
+                        <div class="background">
+
+                        </div>
+                        <div class="info">
+                            <div class="name">
+                                <p>CHOCOLATE VANILLA</p>
+                            </div>
+                            <div class="price">
+                                <p>$9</p>
+                            </div>
+                            <div class="detail">
+                                <p>This is an item on your menu. Give your item a brief description</p>
+                            </div>
+                        </div>
+                        <div class="others">
+                            <p>+</p>
+                        </div>
+                    </div>
+                    <div class="menu-grid__item product-6">
+                        <div class="background">
+
+                        </div>
+                        <div class="info">
+                            <div class="name">
+                                <p>CLASSIC RED VELVET</p>
+                            </div>
+                            <div class="price">
+                                <p>$9</p>
+                            </div>
+                            <div class="detail">
+                                <p>This is an item on your menu. Give your item a brief description</p>
+                            </div>
+                        </div>
+                        <div class="others">
+                            <p>+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="guest-order order-online__content__right">
+                <div class="total-item">
+                    <p>My Order</p>
+                    <p id="item-number"> (0 items)</p>
+                </div>
+                <div class="my-item">
+                    <div class="ordered">
+                        <div class="empty-shopping">
+                            <img src="img/shopping.png" alt="">
+                            <p>Browse our menu and start adding items to your order</p>
+                        </div>
+                        <div class="my-cupcake">
+                            <ul id="ordered-list">
+                                <!-- <li>
+                                    <div class="name">
+                                        <p><span>1x </span> SUGAR FREE CHOCOLATE VANILLA</p>
+                                        <p class = "guest-request"></p>
+                                    </div>
+                                   
+                                    <div class="price">
+                                        <p class="total-cupcake-cost">$9</p>
+                                    </div>
+                                    <div class="button">
+                                        <button class="increase-amount"> + </button>
+                                        <button class="decrease-amount"> &times; </button>
+                                    </div>
+                                </li> -->
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subtotal">
+                        <p>Subtotal</p>
+                        <p id="subtotal">0$</p>
+                    </div>
+                </div>
+                <div class="other">
+                    <div class="special-request">
+                        <h4 id="show-big-request"> <span>+</span> Special Request</h4>
+                        <div class="special-request-form">
+                            <textarea name="big-request" id="big-request" rows="5"
+                                placeholder="Special requests"></textarea>
+                        </div>
+                    </div>
+                    <div class="order-now-btn">
+                        <button>Order Now <i class="fas fa-chevron-right"></i> </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+        <div class="contact__content">
+            <div class="row--1">
+                <div class="contact__left">
+                    <img src="img/contact.webp" alt="">
+                </div>
+                <div class="contact__right">
+                    <div class="contact__header">
+                        <h3 class="heading">CONTACT US</h3>
+                        <p class="contact__info">
+                            500 Terry Francois Street, San Francisco, CA 94158
+                            info@mysite.com \\ 123-456-7890
+                            <br><br>
+                            We want to hear from you, write us:
+                        </p>
+
+                    </div>
+                    <div class="contact__form">
+                        <form action="">
+                            <input type="text" id="client-name" placeholder="Name" autocomplete="off" required>
+                            <input type="email" id="client-email" placeholder="Email" autocomplete="off" required>
+                            <input type="text" id="client-phone" placeholder="Phone" autocomplete="off">
+                            <textarea autocomplete="off" name="" cols="30" rows="6" placeholder="Message"></textarea>
+                            <input class="submit-btn" type="submit" value="Submit">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row--2 map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="workshops-section section" id="workshops">
+        <div class="workshops">
+            <div class="workshops__header">
+                <h3 class="heading">BOOK A WORKSHOP</h3>
+            </div>
+            <div class="workshops__container">
+                <div class="workshop">
+                    <div class="workshop__left">
+                        <img src="img/cupcake_workshop1.jpg" alt="">
+                    </div>
+                    <div class="workshop__right">
+                        <div class="workshop__right__content">
+                            <p class="name">Cupcake master</p>
+                            <p class="time">3hr</p>
+                            <p class="price">$115</p>
+                            <button class="btn-cyan book-work-shop">Book a workshop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="workshops__container">
+                <div class="workshop">
+                    <div class="workshop__left">
+                        <img src="img/baking_workshop.jpg" alt="">
+                    </div>
+                    <div class="workshop__right">
+                        <div class="workshop__right__content">
+                            <p class="name">baking</p>
+                        <p class="time">1hr 30 min</p>
+                        <p class="price">$65</p>
+                        <button class="btn-cyan book-work-shop">Book a workshop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="workshops__container">
+                <div class="workshop">
+                    <div class="workshop__left">
+                        <img src="img/frosting_workshop.jpg" alt="">
+                    </div>
+                    <div class="workshop__right">
+                        <div class="workshop__right__content">
+                            <p class="name">Frosting</p>
+                            <p class="time">2hr</p>
+                            <p class="price">$85</p>
+                            <button class="btn-cyan book-work-shop">Book a workshop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="workshops__footer">
+
+            </div>
+        </div>
+    </section>
+
+    <div class="cupcake-card-container" id="product-1">
+        <div class="cupcake-card">
+            <button class="close-card" onclick="closeCupcakeCard()"> &times;</button>
+            <img src="img/menuItem3.webp" alt="">
+            <div class="cupcake-card__content">
+                <div class="cupcake-card__info">
+                    <h2>GLUTEN FREE RED VELVET</h2>
+                    <p><span>$9</span><br> This is an item on your menu. Give your item a brief description</p>
+                </div>
+                <div class="special-request">
+                    <h4>Special Request ?</h4>
+                    <div class="content">
+                        <p class="show-card-request"><span>+</span>Add them here. We'll do our best to make it happen.
+                        </p>
+                        <div class="card-request">
+                            <textarea name="card-request" class="card-textarea" cols="" rows="5"
+                                placeholder="Special requests"></textarea>
+                            <p class="extra-fee">*Extra charges may apply</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <p>Quantity</p>
+                    <div class="right">
+                        <button class="remove-item"> - </button>
+                        <span>1</span>
+                        <button class="add-item"> + </button>
+                    </div>
+                </div>
+                <button class="add" onclick="addItemToList()"> <span>+</span> Add to my order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cupcake-card-container" id="product-2">
+        <div class="cupcake-card">
+            <button class="close-card" onclick="closeCupcakeCard()"> &times;</button>
+            <img src="img/menuItem2.webp" alt="">
+            <div class="cupcake-card__content">
+                <div class="cupcake-card__info">
+                    <h2>SUGAR FREE CHOCOLATE VANILLA</h2>
+                    <p><span>$9</span> <br> This is an item on your menu. Give your item a brief description</p>
+                </div>
+                <div class="special-request">
+                    <h4>Special Request ?</h4>
+                    <div class="content">
+                        <p class="show-card-request"><span>+</span>Add them here. We'll do our best to make it happen.
+                        </p>
+                        <div class="card-request">
+                            <textarea name="card-request" class="card-textarea" cols="" rows="5"
+                                placeholder="Special requests"></textarea>
+                            <p class="extra-fee">*Extra charges may apply</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <p>Quantity</p>
+                    <div class="right">
+                        <button class="remove-item"> - </button>
+                        <span>1</span>
+                        <button class="add-item"> + </button>
+                    </div>
+                </div>
+                <button class="add" onclick="addItemToList()"> <span>+</span> Add to my order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cupcake-card-container" id="product-3">
+        <div class="cupcake-card">
+            <button class="close-card" onclick="closeCupcakeCard()"> &times;</button>
+            <img src="img/menuItem1.webp" alt="">
+            <div class="cupcake-card__content">
+                <div class="cupcake-card__info">
+                    <h2>SUGAR FREE DOUBLE CHOCOLATE</h2>
+                    <p><span>$9</span> <br> This is an item on your menu. Give your item a brief description</p>
+                </div>
+                <div class="special-request">
+                    <h4>Special Request ?</h4>
+                    <div class="content">
+                        <p class="show-card-request"><span>+</span>Add them here. We'll do our best to make it happen.
+                        </p>
+                        <div class="card-request">
+                            <textarea name="card-request" class="card-textarea" cols="" rows="5"
+                                placeholder="Special requests"></textarea>
+                            <p class="extra-fee">*Extra charges may apply</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <p>Quantity</p>
+                    <div class="right">
+                        <button class="remove-item"> - </button>
+                        <span>1</span>
+                        <button class="add-item"> + </button>
+                    </div>
+                </div>
+                <button class="add" onclick="addItemToList()"> <span>+</span> Add to my order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cupcake-card-container" id="product-4">
+        <div class="cupcake-card">
+            <button class="close-card" onclick="closeCupcakeCard()"> &times;</button>
+            <img src="img/menuItem4.webp" alt="">
+            <div class="cupcake-card__content">
+                <div class="cupcake-card__info">
+                    <h2>DOUBLE CHOCOLATE</h2>
+                    <p><span>$9</span> <br> This is an item on your menu. Give your item a brief description</p>
+                </div>
+                <div class="special-request">
+                    <h4>Special Request ?</h4>
+                    <div class="content">
+                        <p class="show-card-request"><span>+</span>Add them here. We'll do our best to make it happen.
+                        </p>
+                        <div class="card-request">
+                            <textarea name="card-request" class="card-textarea" cols="" rows="5"
+                                placeholder="Special requests"></textarea>
+                            <p class="extra-fee">*Extra charges may apply</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <p>Quantity</p>
+                    <div class="right">
+                        <button class="remove-item"> - </button>
+                        <span>1</span>
+                        <button class="add-item"> + </button>
+                    </div>
+                </div>
+                <button class="add" onclick="addItemToList()"> <span>+</span> Add to my order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cupcake-card-container" id="product-5">
+        <div class="cupcake-card">
+            <button class="close-card" onclick="closeCupcakeCard()"> &times;</button>
+            <img src="img/menuItem5.webp" alt="">
+            <div class="cupcake-card__content">
+                <div class="cupcake-card__info">
+                    <h2>CHOCOLATE VANILLA</h2>
+                    <p><span>$9</span> <br> This is an item on your menu. Give your item a brief description</p>
+                </div>
+                <div class="special-request">
+                    <h4>Special Request ?</h4>
+                    <div class="content">
+                        <p class="show-card-request"><span>+</span>Add them here. We'll do our best to make it happen.
+                        </p>
+                        <div class="card-request">
+                            <textarea name="card-request" class="card-textarea" cols="" rows="5"
+                                placeholder="Special requests"></textarea>
+                            <p class="extra-fee">*Extra charges may apply</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <p>Quantity</p>
+                    <div class="right">
+                        <button class="remove-item"> - </button>
+                        <span>1</span>
+                        <button class="add-item"> + </button>
+                    </div>
+                </div>
+                <button class="add" onclick="addItemToList()"> <span>+</span> Add to my order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cupcake-card-container" id="product-6">
+        <div class="cupcake-card">
+            <button class="close-card" onclick="closeCupcakeCard()"> &times;</button>
+            <img src="img/menuItem6.webp" alt="">
+            <div class="cupcake-card__content">
+                <div class="cupcake-card__info">
+                    <h2>CLASSIC RED VELVET</h2>
+                    <p><span>$9</span> <br> This is an item on your menu. Give your item a brief description</p>
+                </div>
+                <div class="special-request">
+                    <h4>Special Request ?</h4>
+                    <div class="content">
+                        <p class="show-card-request"><span>+</span>Add them here. We'll do our best to make it happen.
+                        </p>
+                        <div class="card-request">
+                            <textarea name="card-request" class="card-textarea" cols="" rows="5"
+                                placeholder="Special requests"></textarea>
+                            <p class="extra-fee">*Extra charges may apply</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <p>Quantity</p>
+                    <div class="right">
+                        <button class="remove-item"> - </button>
+                        <span>1</span>
+                        <button class="add-item"> + </button>
+                    </div>
+                </div>
+                <button class="add" onclick="addItemToList()"> <span>+</span> Add to my order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="workshops-page section" id="workshop-page">
+        <button id="back-workshops--1"> <i class="fas fa-chevron-left"></i>Back </button>
+        <div class="workshop-detail">
+
+            <div class="header">
+                <p class="name">cupcake master</p>
+                <p class="price-time">3 hrs <span>|</span> $115</p>
+                <button class="btn-cyan book-work-shop">Book Now</button>
+            </div>
+            <div class="img">
+                <img src="img/cupcake_workshop1.jpg" alt="">
+            </div>
+            <div class="description">
+                <p>Describe your service here.
+                    What makes it great?
+                    Use short catchy text to tell people what you offer,
+                    and the benefits they will receive.
+                    A great description gets readers in the mood,
+                    and makes them more likely to go ahead and book.
+                </p>
+            </div>
+            <div class="details">
+                <h4>Book Online</h4>
+                <div class="info">
+                    <p class="name">cupcake master</p>
+                    <p class="price-time">3 hrs <span>|</span> $115</p>
+                    <p class="weekday">Mon, Wed</p>
+                </div>
+                <button class="btn-cyan book-work-shop">Book Now</button>
+            </div>
+            <div class="location-contact">
+                <h4>Location & Contact Details</h4>
+                <p>Tel: + 123-456-7890 <br>
+                    Email: info@mysite.com <br>
+                    500 Terry Francois Street, San Francisco, CA, USA</p>
+            </div>
+        </div>
+        <div class="workshop-detail">
+            <div class="header">
+                <p class="name">baking</p>
+                <p class="price-time">2hr 30min <span>|</span> $115</p>
+                <button class="btn-cyan book-work-shop">Book Now</button>
+            </div>
+            <div class="img">
+                <img src="img/baking_workshop.jpg" alt="">
+            </div>
+            <div class="description">
+                <p>Describe your service here.
+                    What makes it great?
+                    Use short catchy text to tell people what you offer,
+                    and the benefits they will receive.
+                    A great description gets readers in the mood,
+                    and makes them more likely to go ahead and book.
+                </p>
+            </div>
+            <div class="details">
+                <h4>Book Online</h4>
+                <div class="info">
+                    <p class="name">baking</p>
+                    <p class="price-time">2hr 30min<span>|</span> $115</p>
+                    <p class="weekday">Tus, Thu</p>
+                </div>
+                <button class="btn-cyan book-work-shop">Book Now</button>
+            </div>
+            <div class="location-contact">
+                <h4>Location & Contact Details</h4>
+                <p>Tel: + 123-456-7890 <br>
+                    Email: info@mysite.com <br>
+                    500 Terry Francois Street, San Francisco, CA, USA</p>
+            </div>
+        </div>
+        <div class="workshop-detail">
+            <div class="header">
+                <p class="name">frosting</p>
+                <p class="price-time">2hr<span>|</span> $65</p>
+                <button class="btn-cyan book-work-shop">Book Now</button>
+            </div>
+            <div class="img">
+                <img src="img/frosting_workshop.jpg" alt="">
+            </div>
+            <div class="description">
+                <p>Describe your service here.
+                    What makes it great?
+                    Use short catchy text to tell people what you offer,
+                    and the benefits they will receive.
+                    A great description gets readers in the mood,
+                    and makes them more likely to go ahead and book.
+                </p>
+            </div>
+            <div class="details">
+                <h4>Book Online</h4>
+                <div class="info">
+                    <p class="name">cupcake master</p>
+                    <p class="price-time">2hrs <span>|</span> $85</p>
+                    <p class="weekday">Fri, Sun</p>
+                </div>
+                <button class="btn-cyan book-work-shop">Book Now</button>
+            </div>
+            <div class="location-contact">
+                <h4>Location & Contact Details</h4>
+                <p>Tel: + 123-456-7890 <br>
+                    Email: info@mysite.com <br>
+                    500 Terry Francois Street, San Francisco, CA, USA</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="book-workshops section" id="book-workshop">
+        <button id="back-workshops--2"> <i class="fas fa-chevron-left"></i>Back </button>
+        <div class="header">
+            <h3>Schedule Online</h3>
+        </div>
+        <div class="booking">
+            <div class="booking__schedule">
+                <p class="time-zone">
+                    <span id="time-city">
+                        Pitcairn
+                    </span> time (GMT <span id="gmt-time">-08:00</span>)
+                    <span id="change-time-zone">View in my local time zone</span>
+                </p>
+                <div class="input-calendar">
+                    <div class="input-week"><span id="value-week">Dec. 13 - 19, 2020 </span><i
+                            class="far fa-calendar-alt"></i> </div>
+                    <div class="change-week">
+                        <button id="prev-week">
+                            <i class="fas fa-angle-left"></i>
+                        </button>
+                        <button id="next-week">
+                            <i class="fas fa-angle-right"></i>
+                        </button>
+                    </div>
+                    <div id="today">
+                        Today
+                    </div>
+                    <div class="month-calendar">
+                        <div class="head">
+                            <button id="prev-month">
+                                <i class="fas fa-angle-left"></i>
+                            </button>
+                            <h4> December 2020 </h4>
+                            <button id="next-month">
+                                <i class="fas fa-angle-right"></i>
+                            </button>
+                        </div>
+                        <div class="calendar">
+                            <div class="day-of-week">Sun</div>
+                            <div class="day-of-week">Mon</div>
+                            <div class="day-of-week">Tue</div>
+                            <div class="day-of-week">Wed</div>
+                            <div class="day-of-week">Thu</div>
+                            <div class="day-of-week">Fri</div>
+                            <div class="day-of-week">Sat</div>
+                            <div class="calendar__cell">1</div>
+                            <div class="calendar__cell">2</div>
+                            <div class="calendar__cell">3</div>
+                            <div class="calendar__cell">4</div>
+                            <div class="calendar__cell">5</div>
+                            <div class="calendar__cell">30</div>
+                            <div class="calendar__cell">7</div>
+                            <div class="calendar__cell">1</div>
+                            <div class="calendar__cell">2</div>
+                            <div class="calendar__cell">3</div>
+                            <div class="calendar__cell">4</div>
+                            <div class="calendar__cell">5</div>
+                            <div class="calendar__cell">6</div>
+                            <div class="calendar__cell">7</div>
+                            <div class="calendar__cell">1</div>
+                            <div class="calendar__cell">2</div>
+                            <div class="calendar__cell">3</div>
+                            <div class="calendar__cell">4</div>
+                            <div class="calendar__cell">5</div>
+                            <div class="calendar__cell">6</div>
+                            <div class="calendar__cell">7</div>
+                            <div class="calendar__cell">1</div>
+                            <div class="calendar__cell">2</div>
+                            <div class="calendar__cell">3</div>
+                            <div class="calendar__cell">4</div>
+                            <div class="calendar__cell">5</div>
+                            <div class="calendar__cell">6</div>
+                            <div class="calendar__cell">7</div>
+                            <div class="calendar__cell">1</div>
+                            <div class="calendar__cell">2</div>
+                            <div class="calendar__cell">3</div>
+                            <div class="calendar__cell">4</div>
+                            <div class="calendar__cell">5</div>
+                            <div class="calendar__cell">6</div>
+                            <div class="calendar__cell">7</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="display-week">
+                    <div class="display-week__day">
+                        <div class="the-date">15</div>
+                        <div class="the-dow">Sun.</div>
+                        <div class="the-time"></div>
+                    </div>
+                    <div class="display-week__day">
+                        <div class="the-date">
+                            15
+                        </div>
+                        <div class="the-dow">
+                            Mon.
+                        </div>
+                        <div class="the-time">
+
+                        </div>
+                    </div>
+                    <div class="display-week__day">
+                        <div class="the-date">
+                            15
+                        </div>
+                        <div class="the-dow">
+                            Tue.
+                        </div>
+                        <div class="the-time">
+
+                        </div>
+                    </div>
+                    <div class="display-week__day">
+                        <div class="the-date">
+                            15
+                        </div>
+                        <div class="the-dow">Wed.
+                        </div>
+                        <div class="the-time">
+
+                        </div>
+                    </div>
+                    <div class="display-week__day">
+                        <div class="the-date">
+                            15
+                        </div>
+                        <div class="the-dow">
+                            Thu.
+                        </div>
+                        <div class="the-time">
+
+                        </div>
+                    </div>
+                    <div class="display-week__day">
+                        <div class="the-date">
+                            15
+                        </div>
+                        <div class="the-dow">
+                            Fri.
+                        </div>
+                        <div class="the-time">
+
+                        </div>
+                    </div>
+                    <div class="display-week__day">
+                        <div class="the-date">
+                            15
+                        </div>
+                        <div class="the-dow">
+                            Sat.
+                        </div>
+                        <div class="the-time">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="booking__result">
+                <div class="booking__result__content" id="slide-up-down">
+                    <h3 class="result__name">
+                        cupcake master
+                    </h3>
+                    <p class="result__time-price">
+                        3hr <span>|</span> $115
+                    </p>
+                    <div id="result__time"></div>
+                    <button class="btn-cyan booking-next-step">next</button>
+                    <p class="empty-booking">Choose a date and time to continue</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="workshop-form section" id="workshop-form">
+        <div class="anounce">
+            <p>Sorry, online booking is currently closed.</p>
+        </div>
+        <button id="back-workshops--3"> <i class="fas fa-chevron-left"></i>Back </button>
+        <div class="header">
+            <h3>Add your info</h3>
+            <p>Tell us a bit about yourself</p>
+        </div>
+        <div class="workshop-form__content">
+            <div class="workshop-form__content__left">
+                <form action="" class="guest-form">
+                    <div class="guest-name">
+                        <label for="">Name *</label>
+                        <input type="text" id="guest-name">
+                        <p class="invalid-anounce">This field is required</p>
+                    </div>
+                    <div class="guest-email">
+                        <label for="">Email *</label>
+                        <input type="text" id="guest-email">
+                        <p class="invalid-anounce">This field has to be a valid email address</p>
+                    </div>
+                    <label for="">Phone Number</label>
+                    <input type="text" class="guest-phone">
+                    <label for="">Add your message</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <p class="contact__form__text">* Required Info</p>
+                </form>
+            </div>
+            <div class="workshop-form__content__right">
+                <div class="guest-work-shop">
+                    <div class="guest-work-shop__name">cupcake master</div>
+                    <div class="guest-work-shop__time-price">3hr <span>|</span> $115</div>
+                    <div class="guest-work-shop__detail"><span>December 23, 2020 10:00 am500 Terry Francois Street, San
+                            Francisco, CA, USA</span></div>
+                    <div class="guest-work-shop__coupon">
+                        <p><i class="fas fa-tag"></i>Enter a coupon code</p>
+                        <div class="guest-work-shop__coupon__form">
+                            <input type="text" class="coupon" placeholder="e.g., coupon code" disabled>
+                            <button class="coupon-submit"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <button class="book-it btn-cyan">Book It</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="star">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2020 by Dang Khoa, template: Wix.com</p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mySlide.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/workshop.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/form.js"></script>
+</body>
+
+</html>
