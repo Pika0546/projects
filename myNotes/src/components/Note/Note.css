@@ -1,0 +1,81 @@
+@keyframes ani{
+  0%{
+    transform: translateX(-1rem)
+  }
+  25%{
+    transform: translateX(1rem);
+  }
+  50%{
+    transform: translateX(-.5rem);
+  }
+  75%{
+    transform: translateX(.5rem);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+
+.note{
+    padding: 1rem;
+    align-self:flex-start;
+    overflow: hidden;
+    background-color: var(--note-background);
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 40%);
+    transition: .3s;
+    animation: ani .6s linear 1;
+  }
+  
+  .note:hover{
+    transform: scale(1.1);
+  }
+  
+  .note .navbar{
+    display: flex;
+   
+    justify-content: space-between;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid grey;
+  
+  }
+  
+  .note .navbar h4{
+    padding-right: 10px;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   
+  }
+  
+  .note .navbar .button-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: .5rem;
+  }
+  
+  .note .navbar .button-group button{
+    transition: .3s;
+  }
+  
+  .note .navbar .button-group .delete-note:hover{
+    color: red;
+    transform: scale(1.5);
+  }
+  
+  .note .navbar .button-group .edit-note:hover{
+    color: green;
+    transform: scale(1.5);
+  }
+  
+  .note-content{
+    padding-top: .5rem;
+  }
+  
+  .note-content p{
+    text-align: justify;
+    text-indent: 20px;
+  }
+  
