@@ -11,112 +11,6 @@ const defaultState = {
 	noteToEdit: null,
 }
 
-// function App() {
-
-// 	const [isOpenForm, setIsOpenForm] = useState(false)
-// 	const [myNotes, setMyNotes] = useState([])
-// 	const [isEditting, setIsEditting] = useState(false);
-// 	const [noteToEdit, setNoteToEdit] = useState(null);
-
-
-
-// 	const openForm = () =>{
-// 		setIsOpenForm(true);
-// 	}
-
-// 	const closeForm = () =>{
-// 		setIsOpenForm(false);
-// 	}
-
-// 	const addNewNote = (note) =>{
-// 		if(note){
-			
-// 			if(note.id){
-// 				let temp = myNotes;
-// 				let i = -1;
-// 				temp.forEach((item, index) => {
-// 					if(item.id === note.id){
-// 						i = index;
-// 					}
-// 				})
-// 				temp.splice(i, 1, note)
-// 				store(temp);
-// 				setMyNotes(temp);
-// 			}
-// 			else{
-				
-// 				note.id = new Date().getTime().toString();
-// 				store([...myNotes, note]);
-// 				setMyNotes([...myNotes, note]);
-// 			}
-		
-// 		}
-// 	}
-
-// 	const deleteNote = (id) =>{
-// 		if(id){
-// 			store(myNotes.filter((note) => note.id !== id))
-// 			setMyNotes(myNotes.filter((note) => note.id !== id));
-			
-// 		}
-// 	}
-
-// 	const getNoteToEdit = (id) =>{
-// 		if(id){
-// 			let noteEdit;
-// 			myNotes.forEach((note)=>{
-// 				if(note.id === id){
-// 					noteEdit = note;
-// 				}
-// 			})
-// 			setIsOpenForm(true)
-// 			setIsEditting(true);
-// 			setNoteToEdit(noteEdit);
-			
-// 		}
-// 	}
-
-// 	const store = (thing) =>{
-// 		localStorage.setItem('notes',  JSON.stringify(thing));
-// 	}
-
-// 	useEffect(() => {
-// 		const notes = JSON.parse(localStorage.getItem('notes'));
-// 		console.log(notes);
-// 		setMyNotes(notes)
-		
-// 	}, [])
-
-// 	return (
-// 		<div className="App">
-// 			<div className="container">
-// 				<div className="header">
-// 					<h1>
-// 						My Notes
-//          			 </h1>
-// 					<button className="new-note" onClick={openForm}>+</button>
-// 				</div>
-				
-// 				<Notes 
-// 					myNotes={myNotes}
-// 					addNewNote={addNewNote}
-// 					deleteNote={deleteNote}
-// 					getNoteToEdit={getNoteToEdit}
-// 				></Notes>
-// 				{isOpenForm && 
-// 					<FormNote
-// 						addNewNote={addNewNote}
-// 						closeForm={closeForm}
-// 						noteToEdit={isEditting ? noteToEdit : ""}
-// 					></FormNote>
-// 				}
-// 			</div>
-// 		</div>
-// 	);
-// }
-
-// export default App;
-
 const store = (thing) =>{
 	localStorage.setItem('notes',  JSON.stringify(thing));
 }
@@ -147,6 +41,7 @@ const reducer = (state, action) => {
 			return {
 				...state,
 				myNotes: newList,
+				noteToEdit: null,
 			};
 		}
 		else{
@@ -168,11 +63,11 @@ const reducer = (state, action) => {
 			}
 		})
 		return { 
-					...state, 
-					isOpenForm: true, 
-					isEditting: true,
-					noteToEdit: noteEdit 
-				};
+			...state, 
+			isOpenForm: true, 
+			isEditting: true,
+			noteToEdit: noteEdit 
+		};
 	}
 	if (action.type === 'DELETE_NOTE') {
 		const id = action.payload;
@@ -184,11 +79,10 @@ const reducer = (state, action) => {
 		return { ...state, isOpenForm: true };
 	}
 	if(action.type === 'CLOSE_FORM'){
-		return { ...state, isOpenForm: false };
+		return { ...state, isOpenForm: false, noteToEdit: null };
 	}
 	throw new Error('no matching action type');
 };
-
 
 function App() {
 
@@ -223,7 +117,7 @@ function App() {
 	useEffect(() => {
 		dispatch({type: 'GET_DATA'})
 	}, [])
-
+	
 	return (
 		<div className="App">
 			<div className="container">
@@ -236,7 +130,7 @@ function App() {
 				
 				<Notes 
 					myNotes={state.myNotes}
-					addNewNote={addNewNote}
+					openForm={openForm}
 					deleteNote={deleteNote}
 					getNoteToEdit={getNoteToEdit}
 				></Notes>

@@ -1,7 +1,17 @@
 import React from 'react'
 import './Note.css'
 const Note = ({subject, content, id, deleteNote, getNoteToEdit}) => {
-   
+    let temp = content.split('\n');
+    let temp2 = [];
+    // temp.forEach((element) => {
+    //     temp2.push(element);
+    //     temp2.push(<br/>);
+    // });
+    for(let i = 0 ; i < temp.length ; i++){
+        temp2.push(temp[i]);
+        temp2.push(<br key={i}/>);
+    }
+
     return (
         <div className="note">
             <div className="navbar">
@@ -27,7 +37,8 @@ const Note = ({subject, content, id, deleteNote, getNoteToEdit}) => {
             </div>
             <div className="note-content">
                 <p>
-                    {content}
+                    {/* {content} */}
+                    {temp2}
                 </p>
             </div>
         </div>

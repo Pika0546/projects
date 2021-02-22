@@ -1,6 +1,7 @@
 .notes{
     display: grid;
     padding: 1rem 2rem;
+    position: relative;
     grid-template-columns: repeat(1, 1fr);
     gap: 3rem;
   }
@@ -20,5 +21,62 @@
   @media screen and (min-width: 1200px){
     .notes{
         grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .first-intro{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid white;
+    color: white;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+   
+  }
+  
+  .first-intro i{
+    
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: .8;
+  }
+  
+  .first-intro h3{
+    font-size: 1.3rem;
+    opacity: .8;
+    margin-bottom: 1rem;
+  }
+  
+  .first-intro span{
+    opacity: .8;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: .3s;
+  }
+  .first-intro span:hover{
+    opacity: 1;
+    color: cyan;
+    border-bottom: 1px solid cyan;
+    transform: scale(1.2);
+  }
+  @media screen and (min-width: 400px){
+    .first-intro i{
+      font-size: 6rem;
+     
+    }
+    
+    .first-intro h3{
+      font-size: 1.5rem;
+  
+    }
+    
+    .first-intro span{
+     
+      font-size: 1.3rem;
+      
     }
   }
