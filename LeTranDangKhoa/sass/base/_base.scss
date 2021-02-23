@@ -1,0 +1,107 @@
+
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Fre;
+    user-select: none;
+}
+
+html{
+    font-size:16px;
+    scroll-behavior: smooth;
+    @include respond(900){
+        font-size: 13px;
+    }
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    
+    background-color: $color-main-dark;
+    position: relative;
+    
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+body.project-bg{
+    background-image: linear-gradient( rgba($color-main-dark, 0.5) 100%, rgba($color-main-dark, 0.5)100%), url(../img/others/projectbg.jpg);
+
+}
+
+body.about-bg{
+    background-image: linear-gradient( rgba($color-main-dark, 0.5) 100%, rgba($color-main-dark, 0.5)100%), url(../img/others/header.jpg);
+
+}
+
+body.header-bg{
+    background-image: linear-gradient( rgba($color-main-dark, 0.5) 100%, rgba($color-main-dark, 0.5)100%), url(../img/others/header.jpg);
+}
+
+body.contact-bg{
+    background-image: linear-gradient( rgba($color-main-dark, 0.5) 100%, rgba($color-main-dark, 0.5)100%), url(../img/others/header.jpg);
+
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    outline:none;
+    border: none;
+    background: none;
+  
+}
+
+ul{
+    list-style-type:none;
+}
+
+iframe:focus {
+    outline: none;
+  }
+  
+  iframe[seamless] {
+    display: block;
+  }
+
+.hide-ele{
+    display: none;
+    
+}
+
+.shrink{
+  
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes rotate{
+    0%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: rotate(-5px);
+    }
+}
+
+.ani{
+    animation: rotate .5s linear .1s 1;
+    
+}
+.part{
+      padding:0 8rem;
+    @include respond(600){
+        padding: 0 1rem;
+        
+    }
+}

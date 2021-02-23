@@ -1,0 +1,162 @@
+.navigation-1{
+    position: fixed;
+    top: 50%;
+    right: .4rem;
+    z-index: 50000000;
+    @include respond(600){
+        display: none;
+    }
+   &__main-btn{
+       position: relative;
+       span{
+           position: relative;
+           width: 2rem;
+           z-index: 10;
+           height: 2rem;
+            cursor: pointer;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        //    color: white;
+           background-color: $color-main-dark;
+    box-shadow: -.05rem -.05rem .2rem  $color-grey-dark, .1rem .1rem .2rem  $color-black;
+        //    background-color: pink;
+           border-radius: 50%;
+        //    &::after{
+        //     content: "";
+        //     display: block;
+        //     width: 2rem;
+        //     height: 2rem;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     z-index: -1;
+        //     background-color: pink;
+        //     transform: rotate(45deg);
+        // }
+       }
+   }
+
+   &:hover{
+        .navigation-1__sub-btn{
+            &:nth-child(2){
+                    @for $i from 1 through 5{
+                        a div:nth-child(#{$i}){
+                            transform: translateX((($i - 6) * 100%)/1.5 +  (1 - $i)*100%) translateY(($i - 6)/1.5 * 138%);
+                        }  
+                    }
+            }
+            &:nth-child(3){
+                    @for $i from 1 through 6{
+                        a div:nth-child(#{$i}){
+                            transform: translateX(($i - 7) * 100% + (1 - $i)*100%) translateY(($i - 7) * 32%);
+                        }  
+                    }
+            }
+            &:nth-child(4){
+                @for $i from 1 through 8{
+                    a div:nth-child(#{$i}){
+                        transform: translateX(($i - 9) * 100% + (1 - $i)*100%) translateY(-($i - 9) * 32%);
+                    }  
+                }
+            }
+            &:nth-child(5){
+                @for $i from 1 through 8{
+                    a div:nth-child(#{$i}){
+                        transform: translateX(($i - 9)/1.5 * 100% + (1 - $i)*100%) translateY(-($i - 9)/1.5 * 138%);
+                    }  
+                }
+            }
+       }
+   }
+
+   &__sub-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        a{
+            display: flex;
+            div{
+                position: relative;
+                transition: all 1s;
+                color: white;
+                span{
+                    background-color: $color-main-dark;
+                    box-shadow: -.05rem -.05rem .2rem  $color-grey-dark, .1rem .1rem .2rem  $color-black;
+                    position: relative;
+                    width: 2rem;
+                    height: 2rem;
+                    cursor: pointer;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // color: white;
+
+                    border-radius: 50%;
+                }
+            //    &::after{
+            //        content: "";
+            //        display: block;
+            //        position: absolute;
+            //        width: 2rem;
+            //        height: 2rem;
+            //        top: 0;
+            //        z-index: -1;
+            //        left: 0;
+            //        background-color: pink;
+            //        transform: rotate(45deg);
+            //    }
+            }
+            
+        }
+        &:nth-child(2){
+            a{
+                div{
+                    @for $i from 1 through 5{
+                        &:nth-child(#{$i}){
+                            z-index: (6 - $i);
+                            transform: translateX((1 - $i) * 100%);
+                        }  
+                    }
+                }
+            }
+        }
+        &:nth-child(3){
+            a{
+                div{
+                    @for $i from 1 through 6{
+                        &:nth-child(#{$i}){
+                            z-index: (7 - $i);
+                            transform: translateX((1 - $i) * 100%);
+                        }  
+                    }
+                }
+            }
+        }
+        &:nth-child(4){
+            a{
+                div{
+                    @for $i from 1 through 8{
+                        &:nth-child(#{$i}){
+                            z-index: (9 - $i);
+                            transform: translateX((1 - $i) * 100%);
+                        }  
+                    }
+                }
+            }
+        }
+        &:nth-child(5){
+            a{
+                div{
+                    @for $i from 1 through 8{
+                        &:nth-child(#{$i}){
+                            z-index: (9 - $i);
+                            transform: translateX((1 - $i) * 100%);
+                        }  
+                    }
+                }
+            }
+        }
+   }
+}

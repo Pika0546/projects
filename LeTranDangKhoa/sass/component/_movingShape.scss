@@ -1,0 +1,202 @@
+.randomly-shape{
+    position: fixed;
+    z-index: -1;
+}
+
+.moving-circle{
+    width: 7rem;
+    height:7rem;
+    border-radius: 50%;
+    background-color:$color-cyan;
+    top: -10%;
+    left: 50%;
+    
+    &:after{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        content: "";
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: $color-main-dark;
+    }
+    animation-name: moving-left-right;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+.moving-triangle{
+    width: 0;
+    height: 0;
+    top: 25%;
+    left: 20%;
+	border-top: 1rem solid transparent;
+	border-left: 2rem solid rgba($color-white, .5);
+    border-bottom: 1rem solid transparent;
+    animation-name: moving-left-right;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    &:after,&:before{
+        content: " ";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -1rem;
+        left: -.8rem;
+	    border-top: 1rem solid transparent;
+	    border-left: 2rem solid  rgba($color-red, .8);
+        border-bottom: 1rem solid transparent;
+    }
+    &:before {
+        top: -1rem;
+        left: -1.4rem;
+        border-top: 1rem solid transparent;
+	    border-left: 2rem solid  rgba($color-cyan, .6);
+        border-bottom: 1rem solid transparent;
+    }
+}
+
+// .moving-pixel-heart{
+//     display: block;
+//     width: 10px;
+//     height: 10px;
+//     background-color: rgb(20, 17, 17);
+//     margin-left: 10px;
+//     box-shadow: -10px 10px rgb(20, 17, 17), 
+//     -10px 20px rgb(20, 17, 17),
+//     0px 10px rgb(245, 99, 99),
+//     0px 20px rgb(241, 47, 47),
+//     0px 30px rgb(20, 17, 17),
+//     10px 0 rgb(20, 17, 17),
+//     10px 10px rgb(243, 61, 61),
+//     10px 20px rgb(235, 26, 26),
+//     10px 30px rgb(218, 3, 3),
+//     10px 40px rgb(20, 17, 17),
+//     20px 10px rgb(20, 17, 17),
+//     20px 20px rgb(218, 3, 3),
+//     20px 30px rgb(196, 3, 3),
+//     20px 40px rgb(136, 3, 3),
+//     20px 50px rgb(20, 17, 17),
+//     30px 0 rgb(20, 17, 17),
+//     30px 10px rgb(218, 3, 3),
+//     30px 20px rgb(196, 3, 3),
+//     30px 30px rgb(136, 3, 3),
+//     30px 40px rgb(20, 17, 17),
+//     40px 0 rgb(20, 17, 17),
+//     40px 10px rgb(196, 3, 3),
+//     40px 20px rgb(136, 3, 3),
+//     40px 30px rgb(20, 17, 17),
+//     50px 20px rgb(20, 17, 17),
+//     50px 10px rgb(20, 17, 17);
+
+//     top: 70%;
+//     left: 40%;
+//     animation-name: moving-up-down;
+//     animation-iteration-count: infinite;
+//     animation-duration: 10s;
+//     animation-timing-function: linear;
+// }
+
+.moving-square{
+    width: 2rem;
+    height: 2rem;
+    border: .2rem solid $color-cyan;
+   
+    z-index: -1;
+    top: 32rem;
+    left: 66rem;
+    animation-name: moving-left-right;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+.moving-special-circle{
+    width: 3rem;
+    height: 3rem;
+  
+    top: 10%;
+    left: 80%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 100%;
+    overflow: hidden;
+    grid-gap: 5px;
+    border-radius: 50%;
+
+    z-index: -1;
+    animation-name: moving-up-down;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    &__code{
+        background-color: rgba(rgb(231, 68, 231), .8);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.moving-special-dots{
+  
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    grid-gap: 3px;
+    top: 80%;
+    left: 5%;
+    &__dot{
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color:rgba(255, 255, 0, 0.397);
+        border-radius: 50%;
+    }
+    transform: rotate(5deg);
+    animation-name: moving-left-right;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+.moving-heart {
+   
+    top: 70%;
+    left: 40%;
+    animation-name: moving-up-down;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    .heart{
+        background-color: $color-main-red;
+        display: inline-block;
+        height: 30px;
+        margin: 0 10px;
+        position: relative;
+        
+        top: 0;
+        transform: rotate(-45deg);
+        width: 30px;
+        &::after, &::before{
+            content: "";
+            background-color: $color-main-red;
+            border-radius: 50%;
+            height: 30px;
+            position: absolute;
+            width: 30px;
+        }
+        &::after{
+            left: 15px;
+            top: 0;
+        }
+        &::before{
+            top: -15px;
+            left: 0;
+        }
+    }
+  
+}

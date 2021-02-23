@@ -1,0 +1,71 @@
+.flip-container{
+    position: relative;
+    font-size: 3rem;
+    @include horizontalCenter;
+    @include respond(400){
+        display: block;
+        
+    }
+}
+.flip-text{
+    // width: 20rem;
+    margin-left: 1rem;
+    display: inline-block;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    position: relative;
+    overflow: hidden;
+    @include respond(400){
+        display:block;
+        margin-left: 0;
+    }
+    div{
+        position: relative;
+        animation-name: flipText;
+        animation-duration: 15s;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function:linear;
+     
+        span{
+            
+           
+            &:nth-child(1){
+                background-image: linear-gradient(to top, #f1f938, #f0fa37, #f0fb35, #effc34, #eefd32, #effe2f, #f0fe2c, #f1ff28, #f4ff22, #f8ff1a, #fbff10, #ffff00);
+
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+
+            }
+            &:nth-child(2){
+                background-image: linear-gradient(to top, #415aff, #3e57ff, #3b55ff, #3752ff, #344fff, #304bff, #2c47fe, #2843fe, #213cfd, #1a35fb, #112efa, #0525f8);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+            &:nth-child(3){
+                background-image: linear-gradient(to bottom, #949494, #929292, #919191, #8f8f8f, #8e8e8e, #929292, #969696, #9a9a9a, #a4a4a4, #afafaf, #b9b9b9, #c4c4c4);
+                
+
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                color: transparent;
+            }
+            &:nth-child(4){
+                background-image: linear-gradient(to top, #f93838, #fa3737, #fc3535, #fd3434, #fe3232, #fe2f2e, #ff2c2b, #ff2827, #ff2120, #ff1918, #ff0f0d, #ff0000);                -webkit-background-clip: text;
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+            &:nth-child(5){
+                background-image: linear-gradient(to top, #fb62b9, #fa5db7, #f958b5, #f753b4, #f64eb2, #f64bb1, #f647b1, #f644b0, #f742b0, #f93fb0, #fa3db0, #fb3ab0);
+            
+                
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+        }
+    }
+}

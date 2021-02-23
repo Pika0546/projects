@@ -1,0 +1,123 @@
+
+.navigation{
+    display: none;
+    @include respond(600){
+        display: block;
+    }
+    &__button{
+        cursor: pointer;
+        width:3rem;
+        height: 3rem;
+        background-color: $color-main-dark;
+        border-radius: 50%;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        z-index: 5000;
+        transition:all .1s;
+        @include contentCenter;
+        &:active{
+            transform: translate(1px, 2px);
+        }
+        @include respond(600){
+            top: 1rem;
+            right: 1rem;
+        }
+       
+    }
+
+    &__icon{
+        display: block;
+        width: 2rem;
+        height: .2rem;
+        background-color: $color-white;
+        position: relative;
+        transition: all 0.1s;
+        &:after, &:before {
+            content:"";
+            display: block;
+            width: 2rem;
+            height: .2rem;
+            background-color: $color-white;
+            position: absolute;
+            transition: all 0.2s;
+        }
+        &:after {
+            top: .5rem;
+        }
+        &:before {
+            top: -0.5rem;
+        }
+        
+    }
+
+    &__nav{
+        overflow: hidden;
+        width:0%;
+        height: 100vh;
+        @include contentCenter;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: rgba($color-black, 1);
+        transition: all .5s;
+    }
+    &__link{
+        cursor: pointer;
+        font-size: 5rem;
+        @include respond(400){
+            font-size: 4rem;
+        }
+        display: block;
+        font-family: Fre, consolas;
+        color: transparent;
+        font-weight: 700;
+        position: relative;
+        -webkit-text-stroke: 1px $color-white;
+        transition: all .2s;
+        &:hover{
+            color: $color-white;
+            -webkit-text-stroke: 1px $color-black;
+            &:before{
+                color: red;
+                z-index: 1;
+                -webkit-text-stroke: 1px $color-black;
+                transform: translate(8px, -8px);
+                @include respond(400){
+                    transform: translate(6px, -6px);
+                }
+            }
+            &:after{
+                color: cyan;
+                z-index: 2;
+                -webkit-text-stroke: 1px $color-black;
+                transform: translate(16px, -16px);
+                @include respond(400){
+                    transform: translate(12px, -12px);
+                }
+            }
+        }
+        &:after,
+        &:before{
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .2s;
+        }
+    }
+    &__close-btn{
+        
+        background-color:transparent;
+       
+    }
+    &__close-btn:after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    &__close-btn:before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+}

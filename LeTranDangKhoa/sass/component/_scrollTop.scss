@@ -1,0 +1,27 @@
+.scrolltop{
+    position: fixed;
+    display: none;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    opacity: .7;
+    @include contentCenter;
+    
+    &__btn{
+        cursor: pointer;
+        font-size:  3rem;
+    }
+    &:hover{
+        animation: moving-up 1s linear infinite;
+    }
+    @include respond(400){
+        bottom: 1rem;
+        right: .5rem;
+        width: 2rem;
+        height: 2rem;
+        &__btn{
+            font-size:  2rem;
+        }
+    }
+}

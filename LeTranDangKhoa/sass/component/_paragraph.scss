@@ -1,0 +1,15 @@
+.paragraph{
+    color: $color-grey-light;
+    font-size: 1rem;
+    font-family: OpenSans;
+    font-weight:300;
+    &__justify{
+        text-align:justify;
+    }
+    &__left{
+        text-align:left;
+    }
+    &__center{
+        text-align:center;
+    }
+}

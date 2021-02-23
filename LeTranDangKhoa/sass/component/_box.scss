@@ -1,0 +1,74 @@
+.box{
+    &__container{
+        width: 15rem;
+        height: 15rem;
+        perspective: 800px;
+        @include respond(750){
+            width: 12rem;
+            height: 12rem;
+        }
+    }
+    &__area{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation-name: spinAround;
+        animation-iteration-count: infinite;
+        animation-duration: 15s;
+        animation-timing-function:linear;
+        &:after{
+            content:"";
+            display: block;
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+            /* background-image: radial-gradient(farthest-corner at 50% 50%, rgba(0, 0, 0, 0.877), rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.534)); */
+            background-color:rgba(0, 0, 0, 0.205);
+            bottom: -10rem;
+            left: 50%;
+            transform: translateX(-50%) rotateX(90deg);
+            @include respond(600){
+                bottom: -8rem;
+            }
+        }
+    }
+    &__face{
+        position: absolute;
+        width:100%;
+        height: 100%;
+       
+        img{
+            opacity: .9;
+            width:100%;
+            height: auto;
+        }
+        &--1{
+            transform: translateZ(calc(7.5rem + 0.75rem));
+            @include respond(750){
+                transform: translateZ(6.75rem);
+            }
+        }
+        &--2{
+            transform: translateZ(-8.25rem) rotateY(180deg);
+            @include respond(750){
+                transform: translateZ(-6.75rem) rotateY(180deg);
+            }
+        }
+        &--3{
+            transform: rotateY(-90deg) translateX(-7.5rem) translateZ(0.75rem);
+            transform-origin: left;
+            @include respond(750){
+                transform: rotateY(-90deg) translateX(-6rem)  translateZ(0.75rem);
+            }
+        }
+        &--4{
+            transform: rotateY(90deg) translateX(7.5rem) translateZ(0.75rem);
+            transform-origin: right;
+            @include respond(750){
+                transform: rotateY(90deg) translateX(6rem) translateZ(0.75rem);
+            }
+        }
+    }
+}

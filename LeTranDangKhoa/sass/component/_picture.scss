@@ -1,0 +1,18 @@
+.pic{
+    width: 100%;
+    height: auto;
+    &__round{
+        border-radius: 50%;
+    }
+    &__title{
+        color:$color-white;
+        font-size: 1.2rem;
+        font-family: Fre;
+        margin-top: .6rem;
+        font-weight: 100;
+    }
+}
+.profile-picture {
+    width:100%;
+    height: auto;
+}
