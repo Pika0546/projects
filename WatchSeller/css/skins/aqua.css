@@ -1,0 +1,45 @@
+.header .navbar-light .navbar-toggler-icon::before,
+.header .navbar-light .navbar-toggler-icon::after,
+.header .navbar-light .navbar-toggler-icon,
+.footer,
+.mybtn2,
+.newsletter-section::before,
+.testimonials-section .owl-carousel .owl-nav button:hover,
+.testimonials-section::before,
+.products-section .owl-carousel .owl-nav button,
+.features-section .features-item:hover,
+.section-title .title::before,
+.home-section,
+.header{
+    background-color:#05b3b6 ;
+}
+
+.footer .footer-social-links a:hover i,
+.contact-section .contact-item h5,
+.contact-section .contact-item .icon i,
+.faq-section .support-text a,
+.testimonials-section .owl-carousel .owl-nav button,
+.testimonials-section .client-info h5,
+.products-section .products-item .product-content .product-price .new-price,
+.features-section .features-item .icon span,
+.about-section .about-content ul li span,
+.section-title .title,
+.mybtn1,
+.mybtn1:hover{
+	color: #05b3b6;
+}
+
+.preloader .loader{
+    border-right: 5px solid  #05b3b6;
+}
+
+.contact-section .contact-form .form-control:focus,
+.testimonials-section .client-info img{
+    border-color: #05b3b6;
+}
+
+@media(max-width: 991px){
+    .header .navbar #collapsibleNavbar .nav-item .nav-link{
+        color: #05b3b6;
+    }
+}
