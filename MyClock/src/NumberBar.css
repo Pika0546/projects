@@ -1,0 +1,72 @@
+.number-bar{
+    align-self: flex-start;
+    /* transition:  .3s ; */
+    transition-property: transform;
+    transition-duration: .3s;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 40%);
+   
+}
+
+.number-bar:nth-child(1){
+    margin-right: 5px;
+}
+.number-bar:nth-child(4){
+    margin-right: 5px;
+}
+.number-bar:nth-child(7){
+    margin-right: 5px;
+}
+
+.number-bar span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    font-weight: 600;
+    border: 1px solid white;
+    border-top: none;
+    background-color: #F28AB2;
+    color: white;
+    transition-duration: 0;
+    
+}
+
+.number-bar span.current-time{
+    background-color: #ff116c;
+}
+
+.number-bar span:first-child{
+    border-top: 1px solid white;
+}
+
+.number-0{
+    transform:  translateY(calc(var(--cell-size)*5 - 20px));
+}
+.number-1{
+    transform:  translateY(calc(var(--cell-size)*4 - 20px));
+}
+.number-2{
+    transform: translateY(calc(var(--cell-size)*3 - 20px));
+}
+.number-3{
+    transform:  translateY(calc(var(--cell-size)*2 - 20px));
+}
+.number-4{
+    transform:  translateY(calc(var(--cell-size)*1 - 20px));
+}
+.number-5{
+    transform:  translateY(calc(var(--cell-size)*(0) - 20px));
+}
+.number-6{
+    transform:  translateY(calc(var(--cell-size)*(-1) - 20px));
+}
+.number-7{
+    transform:  translateY(calc(var(--cell-size)*(-2) - 20px));
+}
+.number-8{
+    transform: translateY(calc(var(--cell-size)*(-3) - 20px));
+}
+.number-9{
+    transform:  translateY(calc(var(--cell-size)*(-4) - 20px));
+}
