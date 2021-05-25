@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react'
-import homeIcon from '../img/homeIcon1.png'
+import homeIcon from '../img/home.png'
 
-
+import { Link } from 'react-router-dom';
 const Navbar = () => {
 
     const [openMenu, setOpenMenu] = useState(false);
-
     const handler = () =>{
         if(window.innerWidth > 767){
             setOpenMenu(false);
@@ -20,23 +19,30 @@ const Navbar = () => {
         }
     }, [])
 
+
     return (
         <>
             <section className="navbar">
-                <div className="brand">
+                <Link to='/' className="brand">
                     <img className="logo" src={homeIcon} alt="icon"></img>
                     <span> Graph Tools</span>
-                </div>
+                </Link>
                 <ul className="navbar__list">
-                    <li  className="navbar__list__item">
-                        Adjacency matrix
-                    </li>
-                    <li  className="navbar__list__item">
-                        Adjacency list
-                    </li >
-                    <li  className="navbar__list__item">
-                        Contact us
-                    </li>
+                    <Link to='/'>
+                        <li className="navbar__list__item">
+                            Home
+                        </li>
+                    </Link>
+                    <Link to="/main/1">
+                        <li className="navbar__list__item"> 
+                            Matrix
+                        </li>
+                    </Link>
+                    <Link to='/contact'> 
+                        <li className="navbar__list__item">
+                            Contact us
+                        </li>
+                    </Link>
                 </ul>
                 <div 
                     className={"navbar__button " + (openMenu? "is-open" : "")} 
@@ -48,18 +54,39 @@ const Navbar = () => {
                 </div>
             </section>
             <div className={"menu " + (openMenu ? "is-open" : "") }>
-                    <ul className="menu__content">
-                        <li className="menu__content__item">
-                        <span> Adjacency matrix</span>
+                <ul className="menu__content">
+                    <Link to='/'>
+                        <li 
+                            className="menu__content__item"
+                            onClick={()=>{
+                                setOpenMenu(false);
+                            }}
+                        >
+                            <span> Home </span>
                         </li>
-                        <li  className="menu__content__item">
-                            <span>Adjacency list</span>
+                    </Link>
+                    <Link to='/main/1'>
+                        <li  
+                            className="menu__content__item"
+                            onClick={()=>{
+                                setOpenMenu(false);
+                            }}
+                        >
+                            <span>Matrix</span>   
                         </li >
-                        <li  className="menu__content__item">
-                        <span> Contact us</span>
+                    </Link>
+                    <Link to='/contact'> 
+                        <li  
+                            className="menu__content__item"
+                            onClick={()=>{
+                                setOpenMenu(false);
+                            }}
+                        >
+                            <span> Contact us</span>
                         </li>
-                    </ul>
-                </div>
+                    </Link>
+                </ul>
+            </div>
         </>
     )
 }

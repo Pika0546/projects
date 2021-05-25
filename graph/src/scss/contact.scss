@@ -1,0 +1,61 @@
+.contact{
+    @include centerContent;
+    flex-direction: column;
+    &__header{
+        padding: 20px;
+        text-align: center;
+    }
+    &__content{
+        padding: 20px;
+        p{
+            color:white;
+            margin-bottom: 20px;
+        }
+        @include verticalCenter;
+        flex-direction: column;
+       
+    }
+    &__social{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include respond(ml){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        grid-gap: 20px;
+        &__item{
+           
+            padding: 10px;
+            @include verticalCenter;
+            background: $glass-bg;
+            transition: .3s;
+            
+            i.icon{
+                font-size: 70px;
+                margin-right: 20px;
+            }
+
+            i.fb{
+                color: #3E5B99;
+            }
+
+            i.gh{
+                color: #000;
+            }
+
+            i.gm{
+                color: #E94134;
+            }
+
+            &:hover{
+                background: $glass-bg-hover;
+            }
+            @include respond(exml){
+                img{
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+

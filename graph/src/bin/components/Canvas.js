@@ -114,26 +114,27 @@ const Canvas = ({matrix}) => {
     const closeDragElement = () => {
 		document.onmouseup = null;
 		document.onmousemove = null;
-        document.ontouchend = null;
-        document.ontouchmove = null;
+       
 	}
 
-	function moveElement(x, y, index, mouse1X, mouse1Y) {
-	
-        dispatch({type: "MOVE_VERTEX", payload: {x: x - mouse1X, y: y - mouse1Y, index: index}});
+	function moveElement(e, index, mouse1X, mouse1Y) {
+		e = e || window.event;
+		e.preventDefault();
+        dispatch({type: "MOVE_VERTEX", payload: {x: e.clientX - mouse1X, y: e.clientY - mouse1Y, index: index}});
 	}
 
-    const moveArea = (x, y, index, mouse1X, mouse1Y) => {
-        dispatch({type: "MOVE_AREA", payload: {x: x - mouse1X, y: y - mouse1Y, index: index}})
+    const moveArea = (e, index, mouse1X, mouse1Y) => {
+        dispatch({type: "MOVE_AREA", payload: {x: e.clientX - mouse1X, y: e.clientY - mouse1Y, index: index}})
     }
 
 	const dragMouseDown = (e, id) => {
         if(action === "default"){
+            console.log('child');
             e = e || window.event;
             e.stopPropagation()
             e.preventDefault();
-            
             let index = findVertex(id);
+            
             let mouse1X = e.clientX - state.vertexList[index].x;
             let mouse1Y = e.clientY - state.vertexList[index].y;
             
@@ -142,25 +143,23 @@ const Canvas = ({matrix}) => {
             }
             if(state.vertexList[index].status === 'is-in-select-to-move'){
                 document.onmousemove = (e) => {
-                    e = e || window.event;
-                    e.preventDefault();
-                    moveArea(e.clientX, e.clientY, index, mouse1X, mouse1Y);
+                    moveArea(e, index, mouse1X, mouse1Y);
                 }
             }
             else{
                 document.onmousemove = (e) => {
-                    e = e || window.event;
-                    e.preventDefault();
-                    moveElement(e.clientX, e.clientY,  index, mouse1X, mouse1Y);
+                    moveElement(e, index, mouse1X, mouse1Y);
                 }
             }    
         }
 	
 	}
 
-    const drawArea = (clientX, clientY, x, y, startX, startY) => {
-        let dentaX = clientX - startX;
-        let dentaY = clientY - startY;
+    const drawArea = (e, x, y, startX, startY) => {
+        e = e || window.event;
+		e.preventDefault();
+        let dentaX = e.clientX - startX;
+        let dentaY = e.clientY - startY;
         let origin = ["top", "left"];
         if(dentaX < 0){
             origin[1] = "right";
@@ -173,18 +172,24 @@ const Canvas = ({matrix}) => {
     }
 
     const closeDrawArea = (e) => {
-
+        // console.log(state.selectedArea);
+        // let width = state.selectedArea.width;
+        // let height = state.selectedArea.height;
+        // console.log(width, height);
+        // if(width === 0 && height === 0){
+        //     dispatch({type: "CLEAR_TEMP"});
+        // }else{
+        //     dispatch({type: "CLEAR_AREA"});
+        // }
         dispatch({type: "CLEAR_AREA"});
         // setAction("start-move-vertex-area")
         document.onmouseup = null;
 		document.onmousemove = null;
-        document.ontouchmove = null;
-        document.ontouchend = null;
     }
 
     const startSelectArea = (e) => {
         if(action === 'default'){
-
+            console.log('parent');
             e = e || window.event;
             e.preventDefault();
             let myCanvas = document.getElementById("canvas");
@@ -197,9 +202,7 @@ const Canvas = ({matrix}) => {
                 closeDrawArea(e);
             }
             document.onmousemove = (e) => {
-                e = e || window.event;
-                e.preventDefault();
-                drawArea(e.clientX, e.clientY, x, y, startX, startY);
+                drawArea(e, x, y, startX, startY);
             }
         }
         
@@ -273,50 +276,6 @@ const Canvas = ({matrix}) => {
     
     const closeEdgeForm = () => {
         dispatch({type: "CLOSE_EDGE_FORM"});
-    }
-
-    
-
-    const onTouchVertex = (event, id) => {
-        if(action === "default"){
-            event = event || window.event;
-            event.stopPropagation();
-            let index = findVertex(id);
-            let mouse1X = event.touches[0].pageX - state.vertexList[index].x;
-            let mouse1Y = event.touches[0].pageY - state.vertexList[index].y;
-            document.getElementsByTagName("BODY")[0].classList.add("disable-pull-to-refresh");
-            const touchMove = (e) => {
-                e = e || window.event;
-                e.stopPropagation();
-                e.preventDefault();
-                moveElement(e.touches[0].pageX, e.touches[0].pageY, index, mouse1X, mouse1Y);
-            }
-            
-            if(state.vertexList[index].status === 'is-in-select-to-move'){
-                document.ontouchmove = (e) => {
-                    e = e || window.event;
-                    e.stopPropagation();
-                    e.preventDefault();
-                    moveArea(e.touches[0].pageX,e.touches[0].pageY, index, mouse1X, mouse1Y);
-                }
-            }
-            else{
-                // document.ontouchmove = (e) => {
-                //     e = e || window.event;
-                //     e.stopPropagation();
-                //     e.preventDefault();
-                //     moveElement(e.touches[0].pageX, e.touches[0].pageY, index, mouse1X, mouse1Y);
-                // }
-
-                document.addEventListener("touchmove",touchMove, {passive: false});
-            }    
-            document.ontouchend = (e,) => {
-                document.getElementsByTagName("BODY")[0].classList.remove("disable-pull-to-refresh");
-
-                document.removeEventListener("touchmove", touchMove, {passive: false});
-                closeDragElement(e);
-            }
-        }
     }
 
     let selectedAreaEle = "";
@@ -408,16 +367,13 @@ const Canvas = ({matrix}) => {
                                             left: item.x - vertexSize/2 + 'px'
                                         }}
                                     key={item.value}
-                                    id = {"vertex-" + item.value}
                                     onClick={()=>{
                                         handleClickOnVertex(item)
                                     }}
                                     onMouseDown={(e)=>{
                                         dragMouseDown(e, item.value);
                                     }}
-                                    onTouchStart={(e)=>{
-                                        onTouchVertex(e, item.value);
-                                    }}
+                                   
                                 >
                                     <span>{item.value}</span>
                                 </div>
