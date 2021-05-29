@@ -160,3 +160,57 @@
         }
    }
 }
+
+
+.navbar{
+    position: fixed;
+    top: 50%;
+    right: 0rem;
+    transform: translateY(-50%);
+    border-radius: .2rem;
+    padding: .5rem 1rem;
+    // padding-right: 0;
+    &__item{
+        // height: 2rem;
+        width: 2rem;
+        overflow-x: hidden;
+        @include horizontalCenter;
+        flex-direction: column;
+        &__social{
+            width: 2rem;
+            height: 2rem;
+            @include contentCenter;
+        }
+        div{
+            width: 2rem;
+            height: 2rem;
+            @include contentCenter;
+        }
+        &__text{
+            display: block;
+            height: 0;
+            overflow: hidden;
+            transition: .3s all;
+            transform-origin: center center;
+            text-align: center;
+            border: 1px solid white;
+            border-radius: .5rem;
+            @include contentCenter;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &:hover{
+            cursor: pointer;
+
+            .navbar__item__text{
+                height: 11rem;
+                padding: 1rem 0;
+                
+            }
+        }
+        &:not(:last-child){
+            margin-bottom:.6rem ;
+
+        }
+    }
+}

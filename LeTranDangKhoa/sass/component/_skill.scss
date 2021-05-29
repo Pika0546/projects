@@ -1,78 +1,78 @@
-.skill{
-    &__container{
-        display: grid;
-        margin-top: 1rem;
-        grid-template-columns: auto auto;
-        grid-gap: 1rem;
-        width: 100%;
-        margin-bottom: 3rem;
-        @include respond(600){
-            grid-template-columns: auto;
-        }
-    }
-    &__bar{
-        width:100%;
-        box-shadow: -.05rem -.05rem .2rem   $color-black, .1rem .1rem .2rem  $color-grey-dark;
-        border-radius: 20rem;
-        padding: .3rem;
-        &-progress{
-            background-color: $color-white;
-            height: .5rem;
-            border-radius: 20rem;
-        }
+// .skill{
+//     &__container{
+//         display: grid;
+//         margin-top: 1rem;
+//         grid-template-columns: auto auto;
+//         grid-gap: 1rem;
+//         width: 100%;
+//         margin-bottom: 3rem;
+//         @include respond(600){
+//             grid-template-columns: auto;
+//         }
+//     }
+//     &__bar{
+//         width:100%;
+//         box-shadow: -.05rem -.05rem .2rem   $color-black, .1rem .1rem .2rem  $color-grey-dark;
+//         border-radius: 20rem;
+//         padding: .3rem;
+//         &-progress{
+//             background-color: $color-white;
+//             height: .5rem;
+//             border-radius: 20rem;
+//         }
 
-    }
-    &__info{
-        margin-bottom: .5rem;
-        color: $color-white;
-        font-size: .8rem;
-        font-family: Roboto;
-        @include clearfix;
+//     }
+//     &__info{
+//         margin-bottom: .5rem;
+//         color: $color-white;
+//         font-size: .8rem;
+//         font-family: Roboto;
+//         @include clearfix;
         
-    }
-    &__name{
-        float: left;
-    }
-    &__score{
-        float: right;
-    }
-    &__progress{
-        &:nth-child(1) .skill__bar-progress{
-            width: 80%;
-        }
-        &:nth-child(2) .skill__bar-progress{
-            width: 70%;
-        }
-        &:nth-child(3) .skill__bar-progress{
-            width: 50%;
-        }
-        &:nth-child(4) .skill__bar-progress{
-            width: 40%;
-        }
-        &:nth-child(5) .skill__bar-progress{
-            width: 80%;
-        }
-        &:nth-child(6) .skill__bar-progress{
-            width: 40%;
-        }
-        &:nth-child(1) .skill__info{
-            width: 80%;
-        }
-        &:nth-child(2) .skill__info{
-            width: 70%;
-        }
-        &:nth-child(3) .skill__info{
-            width: 50%;
-        }
-        &:nth-child(4) .skill__info{
-            width: 40%;
-        }
-        &:nth-child(5) .skill__info{
-            width: 80%;
-        }
-        &:nth-child(6) .skill__info{
-            width: 40%;
-        }
-    }
+//     }
+//     &__name{
+//         float: left;
+//     }
+//     &__score{
+//         float: right;
+//     }
+//     &__progress{
+//         &:nth-child(1) .skill__bar-progress{
+//             width: 80%;
+//         }
+//         &:nth-child(2) .skill__bar-progress{
+//             width: 70%;
+//         }
+//         &:nth-child(3) .skill__bar-progress{
+//             width: 50%;
+//         }
+//         &:nth-child(4) .skill__bar-progress{
+//             width: 40%;
+//         }
+//         &:nth-child(5) .skill__bar-progress{
+//             width: 80%;
+//         }
+//         &:nth-child(6) .skill__bar-progress{
+//             width: 40%;
+//         }
+//         &:nth-child(1) .skill__info{
+//             width: 80%;
+//         }
+//         &:nth-child(2) .skill__info{
+//             width: 70%;
+//         }
+//         &:nth-child(3) .skill__info{
+//             width: 50%;
+//         }
+//         &:nth-child(4) .skill__info{
+//             width: 40%;
+//         }
+//         &:nth-child(5) .skill__info{
+//             width: 80%;
+//         }
+//         &:nth-child(6) .skill__info{
+//             width: 40%;
+//         }
+//     }
     
-}
+// }

@@ -74,7 +74,6 @@ iframe:focus {
 
 .hide-ele{
     display: none;
-    
 }
 
 .shrink{
@@ -83,20 +82,6 @@ iframe:focus {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-@keyframes rotate{
-    0%{
-        transform: translateX(5px);
-    }
-    100%{
-        transform: rotate(-5px);
-    }
-}
-
-.ani{
-    animation: rotate .5s linear .1s 1;
-    
 }
 .part{
       padding:0 8rem;

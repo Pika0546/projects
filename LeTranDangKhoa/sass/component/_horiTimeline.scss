@@ -1,0 +1,28 @@
+.hori-timeline{
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1rem;
+    &__item{
+        display: flex;
+        position: relative;
+        align-items: center;
+    }
+    &__content{
+        border-radius: 1rem;
+        position: relative;
+        padding: 1rem;
+        h4{
+            font-family: OpenSans;
+            font-size: .8rem;
+        }
+    }
+    &__icon{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

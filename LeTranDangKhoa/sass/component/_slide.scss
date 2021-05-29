@@ -38,7 +38,6 @@
         transition: top 1s, left 1s, transform 1s;
         box-shadow: -.05rem -.05rem .2rem  $color-grey-dark, .1rem .1rem .2rem  $color-grey-dark;
         position: relative;
-
         @include respond(600){
             left: 0;
             padding: 0rem;
@@ -148,7 +147,7 @@
         position: absolute;
         font-size: 5rem;
       
-       
+        z-index: 2;
         width: 8%;
         height: 30%;
         background-color: rgba($color-white, .8);
