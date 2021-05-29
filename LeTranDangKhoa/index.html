@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" type="image/png" href="./img/others/K.png">  
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-
     <title>Dang Khoa</title>
 </head>
 
@@ -87,22 +84,22 @@
         <div class="navigation__nav" id="nav">
             <ul class="navigation__list">
                 <li class="navigation__item">
-                    <a href="#header-section" class="navigation__link" id="header" data-text="Home">
+                    <a href="#home" class="navigation__link" id="header" data-text="Home">
                         Home
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#about-section" class="navigation__link" id="about" data-text="About">
+                    <a href="#about-me" class="navigation__link" id="about" data-text="About">
                         About
                     </a>
                     </li>
                 <li class="navigation__item">
-                    <a href="#project-section" class="navigation__link" id="project" data-text="Project">
+                    <a href="#projects" class="navigation__link" id="project" data-text="Project">
                         Project
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#contact-section" class="navigation__link" id="contact" data-text="Contact">
+                    <a href="#contact-me" class="navigation__link" id="contact" data-text="Contact">
                         Contact
                     </a>
                 </li>
@@ -110,12 +107,13 @@
         </div>
     </div>
 
+<!-- 
     <div class="navigation-1">
 		<div class="navigation-1__main-btn ">
 			<span class="fas fa-bars pink-text"></span>
 		</div>
 		<div class="navigation-1__sub-btn ">
-			<a href="#header-section" class="pink-hover-text">
+			<a href="#home" class="pink-hover-text">
 				<div >
 					<span class="fas fa-home pink-text"></span>
 				</div>
@@ -135,7 +133,7 @@
 			</a>
 		</div>
 		<div class="navigation-1__sub-btn">
-			<a href="#about-section" class="pink-hover-text">
+			<a href="#about-me" class="pink-hover-text">
 				<div>
 					<span class="fas fa-user pink-text"></span>
 				</div>
@@ -157,7 +155,7 @@
 			</a>
 		</div>
 		<div class="navigation-1__sub-btn">
-			<a href="#project-section"  class="pink-hover-text">
+			<a href="#projects"  class="pink-hover-text">
 				<div>
 					<span class="fas fa-laptop-code pink-text"></span>
 				</div>
@@ -185,7 +183,7 @@
 			</a>
 		</div>
 		<div class="navigation-1__sub-btn">
-			<a href="#contact-section"  class="pink-hover-text">
+			<a href="#contact-me"  class="pink-hover-text">
 				<div>
 					<span class="fas fa-phone-alt pink-text"></span>
 				</div>
@@ -213,78 +211,106 @@
 			</a>
 		</div>
 	</div>
+     -->
     
-    <div class="home-icon pink-border" id="home-icon">
-        <a href="#" class="home-icon--content pink-text">K</a>
-    </div>
-
-    <header class="header part" id="header-section">
-
-        <div class="header__grid-cell header__grid-cell--1">
-            <div class="header__info">
-
-                <p class="header__infor--text">Hello</p>
-                <h3 class="heading-primary flip-container" data-text="I'm Dang Khoa">
-                    <p>I'm</p>
-                    <div class="flip-text">
-                       <div>
-                           <span>Dang Khoa <br></span>  
-                           <span>a Student <br></span> 
-                           <span>a Developer <br></span> 
-                           <span>and <br></span> 
-                           <span>a Dreamer</span> 
-                       </div>
-                   
-                    </div>
-                </h3>
-                <p class="header__infor--text">~ ~ ~ ~ ~ ~ ~ ~</p>
-
-                <!-- <button id="more-about-me" class="btn floating-block btn-mg-t floating-block-hover pink-text">More About
-                    Me</button> -->
-                    <a href="#about-section" class="btn floating-block btn-mg-t floating-block-hover pink-text"> More about me</a>
-
-            </div>
+     <div class="navbar floating-block">
+         <div class="navbar__item">
+            <a href="#home">
+                <div>
+                    <span class="navbar__item__icon fas fa-home pink-text"></span>
+                 </div>
+                <span class="navbar__item__text pink-text">
+                    <span>H</span>
+                    <span>O</span>
+                    <span>M</span>
+                    <span>E</span>
+                </span>
+            </a>
         </div>
-        <div class="header__grid-cell header__grid-cell--2">
-            <!-- <div class="header__profile-picture special-border">
-                <img src="img/pikaIcon2.jpg" alt="pikachu" class="pic pic__round profile-picture ">
-            </div> -->
-            <div  class="header__imgage-box box__container">
-                <div class="box__area">
-                    <div class="box__face box__face--1 special-border">
-                        <img src="img/profile/ironman.jpg" alt="">
-                    </div>
-                    <div class="box__face box__face--2 special-border">
-                        <img src="img/profile/captain.jpg" alt="">
-                    </div>
-                    <div class="box__face box__face--3 special-border">
-                        <img src="img/profile/hulk.jpg" alt="">
-                    </div>
-                    <div class="box__face box__face--4 special-border">
-                        <img src="img/profile/BW.jpg" alt="">
-                    </div>
-
+         <div class="navbar__item">
+            <a href="#about">
+                <div>
+                    <span class="navbar__item__icon fas fa-user pink-text   "></span>
                 </div>
-            </div>
+                <span class="navbar__item__text pink-text">
+                    <span>A</span>
+                    <span>B</span>
+                    <span>O</span>
+                    <span>U</span>
+                    <span>T</span>
+                </span>
+            </a>
         </div>
+        <div class="navbar__item">
+            <a href="#projects">
+                <div>
+                    <span class="navbar__item__icon fas fa-laptop-code pink-text"></span>
+                </div>
+                <span class="navbar__item__text pink-text">
+                    <span>P</span>
+                    <span>R</span>
+                    <span>O</span>
+                    <span>J</span>
+                    <span>E</span>
+                    <span>C</span>
+                    <span>T</span>
+                </span>
+            </a>
+        
+        </div>
+        <div class="navbar__item">
+            <a href="#contact">
+                <div>
+                    <span class="navbar__item__icon fas fa-phone-alt pink-text"></span>
+                </div>
+                <span class="navbar__item__text pink-text">
+                    <span>C</span>
+                    <span>O</span>
+                    <span>N</span>
+                    <span>T</span>
+                    <span>A</span>
+                    <span>C</span>
+                    <span>T</span>
+                </span>
+            </a>
+        </div>
+        <div class="navbar__item">
+            <a href="https://www.facebook.com/DangKhoaPika/" class="navbar__item__social">
+                <span class="navbar__item__icon fab fa-facebook-f pink-text"></span>
+            </a>
+            
+        </div>
+        <div class="navbar__item">
+            <a href="https://github.com/Pika0546" class="navbar__item__social">
+                <span class="navbar__item__icon fab fa-github pink-text"></span>
+            </a>
+
+        </div>
+     </div>
+    
+     <div class="home-icon pink-border" id="home-icon">
+        <a href="." class="home-icon--content pink-text ">K</a>
+    </div>
+    
+    <header class="header part" id="home">
+          
+        <div class="header__intro" id="header-intro">
+        </div>
+        <a id="header-button" class="pink-text" href="#about-me">
+            
+        </a>
     </header>
 
-    <section class="about part" id="about-section">
+    <section class="about part" id="about-me">
         <div class="about__content">
-            <h4 data-aos="fade-down" class="heading-tertiary pink-text">main info</h4>
-            <h3 data-aos="fade-down" class="heading-secondary">About me</h3>
+            <h4 class="heading-tertiary pink-text">main info</h4>
+            <h3 class="heading-secondary">About me</h3>
             <div class="about__base-info">
-                <div class="about__base-info--1">
-                   
-                    <div data-aos="zoom-in" class="about__base-info--img special-border">
-                        <div class="clip-path__container">
-                            <div class="clip-path__clip clip-path__clip--1"></div>
-                            <div class="clip-path__clip clip-path__clip--2"></div>
-                            <div class="clip-path__clip clip-path__clip--3"></div>
-
-                        </div>
+                <div class="about__base-info--1 js-scroll">
+                    <div class="about__base-info--img special-border ">
+                        <img src="img/profile/me/Me.jpg" alt="">
                     </div>
-                    <div data-aos="fade-up" class="about__base-info--contact-container">
+                    <div class="about__base-info--contact-container">
                         <a 
                             href="https://www.facebook.com/DangKhoaPika/"
                             class="social-media-icon floating-block floating-block-hover"
@@ -293,7 +319,7 @@
                             <span class="fab fa-facebook-f"></span>
                         </a>
                        
-                        <a 
+                        <a  
                             href="https://github.com/Pika0546"
                             class="social-media-icon floating-block floating-block-hover"
                             target="_blank"    
@@ -304,34 +330,31 @@
                     </div>
                 </div>
                 <div class="about__base-info--2">
-                    <p data-aos="zoom-out"  class="paragraph paragraph__justify floating-block--paragraph">
-                        <span style="color: white;"> Hi! My name is Le Tran Dang Khoa. I am a IT Student at HCMUS.</span>
-                        <br>
-                        I am 19 and I come from a small islet located in the middle of Tien River in Tan Long, Thanh
-                        Binh, Dong Thap, Vietnam.
-                        My hobbies is listening to musics, playing games, watching movies. I love cat and I enjoy
-                        Coding.
+                    <h1 class="js-scroll">Le Tran Dang Khoa</h1>
+                    <h2 class="js-scroll">Front-end Developer</h2>
+                    <p class="paragraph paragraph__justify floating-block--paragraph js-scroll">
+                        I am a second year student at VNU - Ho Chi Minh University Of Science.
+                        I have strong passion for Coding, especially for Front-end web development.
+                        My objective is make advantage of UI/UX design knowledge and undestanding
+                        Javascript Programming languge and its frameworks to work as a Front-end Developer.
                     </p>
                     <div class="about__base-info--2__button">
-                        <a 
+                        <!-- <a 
                             target="_blank" 
-                            data-aos="fade-down-right" 
                             href="https://drive.google.com/file/d/1k859L3zYlCpEiQNdPfU0i8y0xHCiQEcy/view?usp=sharing" 
-                            class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text"
+                            class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text js-scroll"
                         >
-                            Download CV
-                        </a>
+                            Resume
+                        </a> -->
                         <a 
-                            data-aos="fade-down" 
-                            href="#contact-section" 
-                            class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text"
+                            href="#contact-me" 
+                            class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text js-scroll"
                         >
                             Talk to me
                         </a>
                         <a 
-                            data-aos="fade-down-left" 
-                            href="#project-section" 
-                            class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text"
+                            href="#projects" 
+                            class="about__base-info--btn btn floating-block btn-mg-t floating-block-hover pink-text js-scroll"
                         >
                             See my works
                         </a>
@@ -340,195 +363,169 @@
             </div>
             <div class="about__more-info">
                
-                <h4 data-aos="fade-down" class="heading-tertiary pink-text">SKILL</h4>
+                <h4 class="heading-tertiary pink-text">SKILL</h4>
                 <div class="skill__container more-info-container" id="skill">
-                    <div data-aos="fade-right" class="skill__progress">
-                        <div class="skill__info">
-                            <p class="skill__name">HTML</p>
-                            
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__bar-progress"></div>
-                        </div>
+             
+                    <div class="skill__front-end skill__content floating-block js-scroll">
+                        <h3 class="pink-text">Front-end</h3>
+                        <ul class="skill__list">
+                            <li>
+                                <!-- <img src="img/skill/html.png">  -->
+                                <!-- <span style="color: #FF7816">HTML</span> 5 -->
+                                HTML5
+                            </li>
+                            <li>
+                                <!-- <img src="img/skill/css.png" alt=""> -->
+                                <!-- <span style="color :#2196F3">CSS</span> 3 -->
+                                CSS3
+                            </li>
+                            <li>
+                                <!-- <img src="img/skill/js.png" alt=""> -->
+                                 <!-- J<span style="color: #FFD83A">ava</span>S<span style="color: #FFD83A">cript</span>(<span style="color: #FFD83A">ES</span>6) -->
+                                Javascript
+                            </li>
+                            <li>
+                                <!-- <img src="img/skill/react.png" alt="">   -->
+                                <!-- <span style="color: #00D1F7">React</span> -->
+                                React
+                            </li>
+                        </ul>
                     </div>
-                    <div data-aos="fade-left" class="skill__progress">
-                        <div class="skill__info">
-                            <p class="skill__name">CSS</p>
-                            
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__bar-progress"></div>
-                        </div>
+                    <div class="skill__programming skill__content floating-block js-scroll">
+                        <h3 class="pink-text">Programming</h3>
+                        <ul class="skill__list">
+                            <li>
+                                <!-- <img src="img/skill/dsa.png" alt="">  -->
+                                Datastructure &
+                                <br> 
+                                Algorithm
+                            </li>
+                            <li>
+                                <!-- <img src="img/skill/oop.jpg" alt=""> -->
+                                 <!-- Object-oriented Programming -->
+                                 OOP
+                            </li>
+                            <li>
+                                <!-- <img src="img/skill/C.png" alt="">  -->
+                                C/C++
+                            </li>
+                        </ul>
                     </div>
-                    <div data-aos="fade-right" class="skill__progress">
-                        <div class="skill__info">
-                            <p class="skill__name">Javascript</p>
-                            
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__bar-progress"></div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-left" class="skill__progress">
-                        <div class="skill__info">
-                            <p class="skill__name">jQuery</p>
-                          
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__bar-progress"></div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-right" class="skill__progress">
-                        <div class="skill__info">
-                            <p class="skill__name">C++</p>
-                            
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__bar-progress"></div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-left" class="skill__progress">
-                        <div class="skill__info">
-                            <p class="skill__name">SCSS</p>
-                           
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__bar-progress"></div>
-                        </div>
+                    <div class="skill__soft skill__content floating-block js-scroll">
+                        <h3 class="pink-text">Soft Skill</h3>
+                        <ul class="skill__list">
+                            <li>
+                                <!-- <img src="img/skill/leader.png" alt=""> -->
+                                Leadership
+                            </li>
+                            <li>
+                                <!-- <img src="img/skill/teamwork.png" alt="">  -->
+                                Teamwork
+                            </li>
+                            <li>
+                                <!-- <img src="img/skill/hard-working.png" alt="">  -->
+                                Hard-working
+
+                            </li>
+                            <li>
+                                <!-- <img src="img/skill/creative.png" alt=""> -->
+                                Creative
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <h4 data-aos="fade-down" class="heading-tertiary pink-text">EDUCATION</h4>
+                <h4 class="heading-tertiary pink-text">EDUCATION</h4>
                 <div class="qualification__container">
-                    <div class="education__container more-info-container" id="experience">
-                        <div data-aos="flip-left" data-aos-anchor-placement="top-center" class="time-line">
-                            <div class="time-line__container time-line__container--left ">
-                                <div class="time-line__content floating-block">
-                                    <h4 class="time-line__time pink-text">2019 - present</h4>
-                                    <h3 class="time-line__heading">VNU - University of Science</h3>
-                                    <h4 class="time-line__heading--sub">Information Technology</h4>
-                                    
-                                </div>
-                                <div class="time-line__icon time-line__icon--left">
-                                    <span class="fas fa-book-open time-line__icon--icon pink-text" ></span>
-                                </div>
-                            </div>
-                            <div class="time-line__container time-line__container--right ">
-                                <div class="time-line__content floating-block">
-                                    <h4 class="time-line__time pink-text">2016 - 2019</h4>
-                                    <h3 class="time-line__heading">Thanh Binh 2 Highschool</h3>
-                                    <h4 class="time-line__heading--sub">Thanh Binh, Dong Thap</h4>
-                                   
-                                </div>
-                                <div class="time-line__icon time-line__icon--right">
-                                    <span class="fas fa-book-open time-line__icon--icon pink-text" ></span>
-                                </div>
-                            </div>
-                            <div class="time-line__container time-line__container--left">
-                                <div class="time-line__content floating-block">
-                                    <h4 class="time-line__time pink-text">2012 - 2016</h4>
-                                    <h3 class="time-line__heading">Tan Long Secondary School</h3>
-                                    <h4 class="time-line__heading--sub">Thanh Binh, Dong Thap</h4>
-                                </div>
-                                <div class="time-line__icon time-line__icon--left">
-                                    <span class="fas fa-book-open time-line__icon--icon pink-text" ></span>
+                    <div class="edu">
+                       <div class="edu__wrapper left js-scroll">
+                            <div class="edu__item floating-block">
+                                <h4 class="pink-text">2007 - 2012</h4>
+                                <h3>Tan Long 2 Primary School</h3>
+                                <p>Dong Thap</p>
+                                <div class="edu__icon">
+                                    <span class="fas fa-book-open pink-text" ></span>
                                 </div>
                             </div>
                         </div>
-    
-                    </div>
-                    <div class="studies__container more-info-container" id="education">
-                        <div data-aos="flip-right" data-aos-anchor-placement="top-center" class="time-line">
-                            <div class="time-line__container time-line__container--left ">
-                                <div class="time-line__content floating-block">
-                                    <h4 class="time-line__time pink-text">Jan 2021</h4>
-                                    <h3 class="time-line__heading">ReactJS</h3>
-                                  
-                                </div>
-                                <div class="time-line__icon time-line__icon--left">
-                                    <span class="fas fa-code time-line__icon--icon pink-text"></span>
-                                </div>
-                            </div>
-                            <div class="time-line__container time-line__container--right ">
-                                <div class="time-line__content floating-block">
-                                    <h4 class="time-line__time pink-text">Aug 2020</h4>
-                                    <h3 class="time-line__heading">jQuery / Bootstrap</h3>
-                                   
-                                </div>
-                                <div class="time-line__icon time-line__icon--right">
-                                    <span class="fas fa-code time-line__icon--icon pink-text"></span>
-                                </div>
-                            </div>
-                            <div class="time-line__container time-line__container--left">
-                                <div class="time-line__content floating-block">
-                                    <h4 class="time-line__time pink-text">Jun 2020</h4>
-                                    <h3 class="time-line__heading">Javascript</h3>
-                                   
-                                </div>
-                                <div class="time-line__icon time-line__icon--left">
-                                    <span class="fas fa-code time-line__icon--icon pink-text" ></span>
-                                </div>
-                            </div>
-                            <div class="time-line__container time-line__container--right ">
-                                <div class="time-line__content floating-block">
-                                    <h4 class="time-line__time pink-text">Feb 2020</h4>
-                                    <h3 class="time-line__heading">HTML/CSS</h3>
-                                   
-                                </div>
-                                <div class="time-line__icon time-line__icon--right">
-                                    <span class="fas fa-code time-line__icon--icon pink-text"></span>
+                        <div class="edu__wrapper right js-scroll">
+                            <div class="edu__item floating-block">
+                                <h4 class="pink-text">2012 - 2016</h4>
+                                <h3>Tan Long Junior High School</h3>
+                                <p>Dong Thap</p>
+                                <div class="edu__icon">
+                                    <span class="fas fa-book-open pink-text" ></span>
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="edu__wrapper left js-scroll">
+                            <div class="edu__item floating-block">
+                                <h4 class="pink-text">2016 - 2019</h4>
+                                <h3>Thanh Binh 2 High School</h3>
+                                <p>Dong Thap</p>
+                                <div class="edu__icon">
+                                    <span class="fas fa-book-open pink-text" ></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edu__wrapper right js-scroll">
+                            <div class="edu__item floating-block">
+                                <h4 class="pink-text">2019 - present</h4>
+                                <h3>HCMC University of Science</h3>
+                                <p>Faculty of Information Technology</p>
+                                <div class="edu__icon">
+                                    <span class="fas fa-book-open pink-text" ></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <h4 data-aos="fade-down" class="heading-tertiary margin-top-big margin-bottom-small pink-text">Certificates</h4>
+                <h4 class="heading-tertiary margin-top-big margin-bottom-small pink-text">Certificates</h4>
                 <div class="portfolio portfolio--certificate">
-                    <div data-aos="zoom-in"  class="portfolio__cell portfolio__img floating-block">
+                    <div class="portfolio__cell portfolio__img floating-block js-scroll">
                         <a href="img/certificates/CodeLearn_AvanC.png" target="_blank">
                             <img src="img/certificates/CodeLearn_AvanC.png" alt="" class="pic portfolio__picture">
                         </a>
                         <h3 class="pic__title">C++</h3>
                     </div>
-                    <div data-aos="zoom-in"  class="portfolio__cell portfolio__img floating-block">
+                    <div class="portfolio__cell portfolio__img floating-block js-scroll">
                         <a href="img/certificates/CodeLearn_BasicAlgo.png" target="_blank">
                             <img src="img/certificates/CodeLearn_BasicAlgo.png" alt="" class="pic portfolio__picture">
                         </a>
                         <h3 class="pic__title">Basic Algorithm</h3>
                     </div>
-                    <div data-aos="zoom-in"  class="portfolio__cell portfolio__img floating-block">
+                    <div class="portfolio__cell portfolio__img floating-block js-scroll">
                         <a href="img/certificates/CodeLearn_BasicJS.png" target="_blank">
                             <img src="img/certificates/CodeLearn_BasicJS.png" alt="" class="pic portfolio__picture">
                         </a>
-                        <h3 class="pic__title">Basic JavaScript</h3>
+                        <h3 class="pic__title">Basic Javascript</h3>
                     </div>
-                    <div data-aos="zoom-in"  class="portfolio__cell portfolio__img floating-block">
+                    <div class="portfolio__cell portfolio__img floating-block js-scroll">
                         <a href="img/certificates/CodeLearn_BasicPython.png">
                             <img src="img/certificates/CodeLearn_BasicPython.png" alt="" class="pic portfolio__picture">
                         </a>
                         <h3 class="pic__title">Basic Python</h3>
                     </div>
-                    <div data-aos="zoom-in"  class="portfolio__cell portfolio__img floating-block">
+                    <div class="portfolio__cell portfolio__img floating-block js-scroll">
                         <a href="img/certificates/CodeLearn_DSA.png" target="_blank">
                             <img src="img/certificates/CodeLearn_DSA.png" alt="" class="pic portfolio__picture">
                         </a>
                         <h3 class="pic__title">Datastructure and Algorithm</h3>
                     </div>
-                    <div data-aos="zoom-in"   class="portfolio__cell portfolio__img floating-block">
+                    <div class="portfolio__cell portfolio__img floating-block js-scroll">
                         <a href="img/certificates/CodeLearn_mmt.png" target="_blank">
                             <img src="img/certificates/CodeLearn_mmt.png" alt="" class="pic portfolio__picture">
                         </a>
                         <h3 class="pic__title">Computer Networking</h3>
                     </div>
-                    <div data-aos="zoom-in"  class="portfolio__cell portfolio__img floating-block">
+                    <div class="portfolio__cell portfolio__img floating-block js-scroll">
                         <a href="img/certificates/CodeLearn_PhanCungMayTinh.png">
                             <img src="img/certificates/CodeLearn_PhanCungMayTinh.png" alt="" class="pic portfolio__picture">
                         </a>
                         <h3 class="pic__title">Computer Hardware</h3>
                     </div>
-                    <div data-aos="zoom-in"  class="portfolio__cell portfolio__img floating-block">
+                    <div class="portfolio__cell portfolio__img floating-block js-scroll">
                         <a href="img/certificates/CodeLearn_PhanMemMayTinh.png" target="_blank">
                             <img src="img/certificates/CodeLearn_PhanMemMayTinh.png" alt="" class="pic portfolio__picture">
                         </a>
@@ -539,11 +536,11 @@
         </div>
     </section>
 
-    <section class="project part" id="project-section">
+    <section class="project part" id="projects">
         <div class="project__content">
-            <h4 data-aos="fade-down" class="heading-tertiary pink-text">PORTFOLIO</h4>
-            <h3 data-aos="fade-down" class="heading-secondary">LATEST WORKS</h3>
-            <div class="project__tab-btn">
+            <h4 class="heading-tertiary pink-text">PORTFOLIO</h4>
+            <h3 class="heading-secondary">LATEST WORKS</h3>
+            <div class="project__tab-btn js-scroll">
                 <button id="all-btn" class="btn btn-tab port-btn pink-hover-text transparent-text"
                     onclick="showProjectType(' all-project');">All</button>
                 <button id="web-btn" class="btn btn-tab port-btn pink-hover-text transparent-text"
@@ -553,77 +550,28 @@
                 <button id="others-btn" class="btn btn-tab port-btn pink-hover-text transparent-text"
                     onclick="showProjectType(' others-project');">Others</button>
             </div>
-            <div class="port-fillter__container">
-                <div class="port-fillter__cell  game-project floating-block pink-hover-bg" onclick="slideShow(0)">
-                    <img src="img/project/tetris.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title ">Tetris</h3>
-                </div>
-                <div class="port-fillter__cell others-project floating-block pink-hover-bg" onclick="slideShow(1)">
-                    <img src="img/project/calendar.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title ">Calendar</h3>
-
-                </div>
-                <div class="port-fillter__cell  game-project floating-block pink-hover-bg" onclick="slideShow(2)">
-                    <img src="img/project/2048.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title">2048</h3>
-                </div>
-                <div class="port-fillter__cell game-project floating-block pink-hover-bg" onclick="slideShow(3)">
-                    <img src="img/project/pikachuGame.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title">Pikachu</h3>
-
-                </div>
-                <div class="port-fillter__cell game-project floating-block pink-hover-bg" onclick="slideShow(4)">
-                    <img src="img/project/jumpingCube.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title">Jumping Cube</h3>
-                </div>
-                <div class="port-fillter__cell game-project floating-block pink-hover-bg" onclick="slideShow(5)">
-                    <img src="img/project/gameSnake.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title">Snake The Game</h3>
-                </div>
-                <div class="port-fillter__cell website-project floating-block pink-hover-bg" onclick="slideShow(6)">
-                    <img src="img/project/watchPage.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title">Watch Selling</h3>
-                </div>
-                <div class="port-fillter__cell website-project floating-block pink-hover-bg" onclick="slideShow(7)">
-                    <img src="img/project/oldPersonal.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title">Personal WebPage 1</h3>
-                </div>
-                <div class="port-fillter__cell website-project floating-block pink-hover-bg" onclick="slideShow(8)">
-                    <img src="img/project/personalWeb2.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title">Personal WebPage 2</h3>
-                </div>
-                <div class="port-fillter__cell website-project floating-block pink-hover-bg" onclick="slideShow(9)">
-                    <img src="img/project/cupcake.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title">Pika Cupcake</h3>
-                </div>
-                <div  class="port-fillter__cell game-project floating-block pink-hover-bg" onclick="slideShow(10)">
-                    <img src="img/project/minesweeper.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title">Minesweeper</h3>
-                </div>
-                <div class="port-fillter__cell others-project floating-block pink-hover-bg" onclick="slideShow(11)">
-                    <img src="img/project/notes.png" alt="" class="pic portfolio__picture">
-                    <h3 class="pic__title ">Pika Notes</h3>
-                </div>
+            <div class="port-fillter__container" id="project-container">
+         
             </div>
         </div>
     </section>
 
-    <section class="contact part" id="contact-section">
+    <section class="contact part" id="contact-me">
         <div class="contact__content">
-            <h4 data-aos="fade-down" class="heading-tertiary  pink-text">CONTACT</h4>
-            <h3 data-aos="fade-down" class="heading-secondary">GET IN TOUCH</h3>
+            <h4 class="heading-tertiary  pink-text">CONTACT</h4>
+            <h3 class="heading-secondary">GET IN TOUCH</h3>
             <div class="contact__info">
-                <div data-aos="zoom-in-up"  class="floating-block contact__info__cell ">
+                <div class="floating-block contact__info__cell js-scroll">
                     <span class="fas fa-phone contact__icon pink-text"></span>
                     <h4 class="contact__info__heading">Phone</h4>
                     <p class="contact__info--info">0342897441</p>
                 </div>
-                <div data-aos="zoom-in-up"  class="contact__info__cell floating-block">
+                <div class="contact__info__cell floating-block js-scroll">
                     <span class="fas fa-envelope contact__icon pink-text"></span>
                     <h4 class="contact__info__heading">Email</h4>
                     <p class="contact__info--info">dangkhoa.it.23@gmail.com</p>
                 </div>
-                <div data-aos="zoom-in-up"  class="contact__info__cell floating-block">
+                <div class="contact__info__cell floating-block js-scroll">
                     <span class="fab fa-github contact__icon pink-text"></span>
                     <h4 class="contact__info__heading">Github</h4>
                     <p class="contact__info--info">
@@ -637,24 +585,24 @@
                 <form name="myForm" action="https://formspree.io/f/xeqpdwdr" method="POST" class="contact__form--form" onsubmit="return validateForm()">
                     <div class="contact__form--input">
                         <div  class="guest-info">
-                           <div class="form-group">
-                                <div data-aos="zoom-out-up" class="form__input floating-block">
+                           <div class="form-group js-scroll">
+                                <div class="form__input floating-block">
                                     <label for="fname">Name:</label>
                                     <input type="text" id="fname" name="name" autocomplete="off" >
                                 </div>
                                 <p class="error-message" id="invalid-name">Name can not be empty</p>
                            </div>
 
-                            <div class="form-group">
-                                <div data-aos="zoom-out-up" class="form__input floating-block">
+                            <div class="form-group js-scroll">
+                                <div class="form__input floating-block">
                                     <label for="fmail">Email:</label>
                                     <input type="text" id="fmail" name="mail" autocomplete="off" >
                                 </div>
                                 <p class="error-message" id="invalid-mail">Invalid email</p>
                             </div>
 
-                            <div class="form-group">
-                                <div data-aos="zoom-out-up" class="form__input floating-block">
+                            <div class="form-group js-scroll">
+                                <div class="form__input floating-block">
                                     <label for="fsubject">Subject:</label>
                                     <input type="text" id="fsubject" name="subject" autocomplete="off">
                                 </div>
@@ -662,8 +610,8 @@
                             </div>
 
                         </div>
-                       <div class="form-group">
-                            <div data-aos="zoom-out-up" class="form__input floating-block contact__message">
+                       <div class="form-group js-scroll">
+                            <div class="form__input floating-block contact__message">
                                 <label for="fmessage">Message</label>
                                 <textarea id="fmessage" name="message" rows="5" ></textarea>
                             </div>
@@ -674,7 +622,7 @@
                     <input  
                         type="submit" 
                         value="Send message"
-                        class="btn btn-mg-t pink-text send-btn floating-block floating-block-hover" 
+                        class="btn btn-mg-t pink-text send-btn floating-block floating-block-hover js-scroll" 
                     >
                 </form>
             </div>
@@ -705,491 +653,7 @@
 
     <section class="project-details" id="project-details-section">
         <div class="project-details__content">
-            <div class="slide">
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Tetris</h3>
-                            <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">1/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione expedita
-                                    aliquam quaerat at modi ducimus voluptatum delectus quia? Illo, deserunt quasi atque
-                                    quas modi aperiam laborum incidunt aliquam soluta!
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>2020</p>
-                                <p class="paragraph"> <span>Author - </span>Me</p>
-                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/projects/tree/main/tetris">Link</a> </p>
-
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/tetrisIframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io/tetris/"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Calendar</h3>
-                            <h4 class="slide__category"><span>Category</span> - Others</h4>
-                            <p class="slide__number">2/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__left">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione expedita
-                                    aliquam quaerat at modi ducimus voluptatum delectus quia? Illo, deserunt quasi atque
-                                    quas modi aperiam laborum incidunt aliquam soluta!
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>2020</p>
-                                <p class="paragraph"> <span>Author - </span>Me</p>
-                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/projects/tree/main/calendar">Link</a> </p>
-
-                            </div>  
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/calendarIframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io/htmlCalendar/"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">2048</h3>
-                            <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">3/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione expedita
-                                    aliquam quaerat at modi ducimus voluptatum delectus quia? Illo, deserunt quasi atque
-                                    quas modi aperiam laborum incidunt aliquam soluta!
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>2020</p>
-                                <p class="paragraph"> <span>Author - </span>Me</p>
-                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/projects/tree/main/2048">Link</a> </p>
-
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/2048Iframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io/my2048/"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Pikachu</h3>
-                            <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">4/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ratione expedita
-                                    aliquam quaerat at modi ducimus voluptatum delectus quia? Illo, deserunt quasi atque
-                                    quas modi aperiam laborum incidunt aliquam soluta!
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>2020</p>
-                                <p class="paragraph"> <span>Author - </span>Me</p>
-                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/projects/tree/main/pikachuGame">Link</a> </p>
-
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/pikachuIframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io/pikachuGame/"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Jumping Cube</h3>
-                            <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">5/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                    This is my first ever javascript game which I have made base on T-rex game of Chrome. At this time, I didn't know much about game design so the game is just a shape jump over another shape.
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>2020</p>
-                                <p class="paragraph"> <span>Author - </span>Me</p>
-                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/jump-and-duck">Link</a> </p>
-
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/jumpingCubeIframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io/jump-and-duck/"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Snake the Game</h3>
-                            <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">6/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                    This is my final project of Programing Engineering subject at University. I made it with my three others teamate using C++. This project earned the maximum score for my team.
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>2020</p>
-                                <p class="paragraph"> <span>Author - </span>My Team</p>
-                                <p class="paragraph"> <span>Tools - </span>C++</p>
-                                <!-- <p class="paragraph"><span>Source Code - </span> <a href="">Link</a> </p> -->
-
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/gameSnakeIframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://www.youtube.com/watch?v=OfrRXK3a6pw&t=15s"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Watch Selling</h3>
-                            <h4 class="slide__category"><span>Category</span> - Website</h4>
-                            <p class="slide__number">7/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                   This is a Watch Selling website, I coded this page on a tutorial of WebShala on youtube to practice my Bootstrap 4 skill.
-
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>2020</p>
-                                <p class="paragraph"> <span>Author - </span>The WebShala</p>
-                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/shala-watch-selling">Link</a> </p>
-
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/watchPageIframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io/shala-watch-selling/"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Personal WebPage 1</h3>
-                            <h4 class="slide__category"><span>Category</span> - Website</h4>
-                            <p class="slide__number">8/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                    This is my very first Personal Website, I finished in September 2020, this page has some information about me, it also instroduces some of my projects.
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>2020</p>
-                                <p class="paragraph"> <span>Author - </span>Me</p>
-                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/Pika0546.github.io">Link</a> </p>
-
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/oldPersonalIframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Personal WebPage 1</h3>
-                            <h4 class="slide__category"><span>Category</span> - Website</h4>
-                            <p class="slide__number">9/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                   This is my present personal website, this website contains my basic information(my skill, my experience, my education).
-                                   it also instroduces all of my projects which I have finished and been working on since I began to study Web Development.
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>2020</p>
-                                <p class="paragraph"> <span>Author - </span>Me</p>
-                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/le-tran-dang-khoa">Link</a> </p>
-
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/personalWeb2Iframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io/le-tran-dang-khoa/"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Pika cupcake</h3>
-                            <h4 class="slide__category"><span>Category</span> - Website</h4>
-                            <p class="slide__number">10/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                    This website is my first ever sales website. I made it base on a template in Wix.com using html, scss, javascript, jQuery
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>2020</p>
-                                <p class="paragraph"> <span>Author - </span>Me</p>
-                                <p class="paragraph"> <span>Tools - </span>HTML, CSS, JavaScript</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/projects/tree/main/pikaCupcake">Link</a> </p>
-
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/cupcakeIframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io/pika-cupcake/"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Minesweeper</h3>
-                            <h4 class="slide__category"><span>Category</span> - Game</h4>
-                            <p class="slide__number">11/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                    This is my first React app after 4 days of studying. Minesweeper is a classic game for those who used to use earlier version of Windows.
-                                    I made this based on Minesweeper game of Google.
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>Jan 2021</p>
-                                <p class="paragraph"> <span>Author - </span>Me</p>
-                                <p class="paragraph"> <span>Tools - </span>ReactJS</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/projects/tree/main/minesweeper">Link</a> </p>
-
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/minesweeperIframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io/minesweeper/"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__container">
-                    <div class="slide__content">
-                        <div class="slide__header">
-                            <h3 class="slide__name pink-text">Pika Notes</h3>
-                            <h4 class="slide__category"><span>Category</span> - Others</h4>
-                            <p class="slide__number">12/12</p>
-                        </div>
-                        <div class="slide__detail">
-                            <div class="slide__brief">
-                                <h4 class="slide__brief__header">
-                                    Project Brief
-                                </h4>
-                                <p class="paragraph paragraph__justify">
-                                    Pika Notes - a app for taking note which user can use to create notes for their own. I use localStorage to save users's notes so their nots can last after users reload or close the tab.
-                                </p>
-                            </div>
-                            <div class="slide__info">
-                                <h4 class="slide__brief__header">
-                                    Project Info
-                                </h4>
-                                <p class="paragraph"> <span>Date - </span>Feb 2021</p>
-                                <p class="paragraph"> <span>Author - </span>Me</p>
-                                <p class="paragraph"> <span>Tools - </span>ReactJS</p>
-                                <p class="paragraph"><span>Source Code - </span> <a target="_blank" href="https://github.com/Pika0546/projects/tree/main/myNotes">Link</a> </p>
-                            </div>
-                        </div>
-                        <div class="slide__project">
-                            <div class="slide__project__picture">
-                                <img src="img/project/notesIframe.png" alt="">
-                                <div class="slide__link">
-                                    <i class="fas fa-hand-point-right slide__pointer pink-text"></i>
-                                    <a class="pink-text" href="https://pika0546.github.io/pikaNotes/"
-                                    target="_blank">See now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="slide" id="slide">
                 <button class="slide__move pink-text" id="next-slide"> <i class="fas fa-angle-right"></i> </button>
                 <button class="slide__move pink-text" id="prev-slide"> <i class="fas fa-angle-left"></i> </button>
                 <button class="slide__close floating-block pink-hover-text" id="close-slide" onclick="closeSlideShow()"> <i class="fas fa-times"></i> </button>
@@ -1203,14 +667,10 @@
         </button>
     </div>
 
-    <script type="text/javascript" src="script/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({
-        disable: function () {
-            let maxWidth = 800;
-            return window.innerWidth < maxWidth;
-        }
-    });</script>
+    <script type="text/Javascript" src="script/main.js"></script>
+    <script type="text/Javascript" src="script/slide.js"></script>
+    <script type="text/Javascript" src="script/scrollAnimate.js"></script>
+
 </body>
 
 </html>
