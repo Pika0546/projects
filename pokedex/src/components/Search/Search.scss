@@ -1,0 +1,104 @@
+.search{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #616161;
+    position: relative;
+    z-index: 1;
+     &::after, &::before{
+        content: "";
+        position: absolute;
+        width: 10rem;
+        height: 5rem;
+        z-index: 0;
+        left:50%;
+        transform: translateX(-50%);
+        background-color: #616161;
+
+    }
+    &::after{
+        border-bottom-left-radius: 8rem;
+        border-bottom-right-radius: 8rem;
+        top: 60%;
+    }
+    &::before{
+        border-top-left-radius: 8rem;
+        border-top-right-radius: 8rem;
+        top: -60%;
+    }
+    form{
+        z-index: 1;
+
+        position: relative;
+        width: 80%;
+    }
+    &__input{
+        width: 100%;
+        height: 3.5rem;
+        padding-left: 2rem;
+        border: 1px solid black;
+        font-size: 1.2rem;
+        border-radius: 2rem;
+        padding-right: 4rem;
+    }
+
+    &__button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3.5rem;
+        height: 100%;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 767px){
+    .search{
+        &::after, &::before{
+            width: 8rem;
+            height: 4rem;
+        }
+      
+        &::before{
+            border-top-left-radius: 8rem;
+            border-top-right-radius: 8rem;
+            bottom: 60%;
+            top: auto;
+        }
+        &__input{
+            height: 3rem;
+            padding-left: 1.5rem;
+            border: 1px solid black;
+            font-size: 1rem;
+            border-radius: 2rem;
+            padding-right: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .search{
+        &__input{
+            height: 2.5rem;
+            padding-left: 1rem;
+            font-size: .8rem;
+            padding-right: 3rem;
+        }
+        &::after, &::before{
+            width: 7rem;
+            height: 3.5rem;
+        }
+        &__button{
+           
+            width: 3rem;
+            
+            font-size: 1rem;
+           
+        }
+    }
+}

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600&display=swap');
+.badge{
+    padding: .1rem 1rem;
+    margin-right: .8rem;
+    border-radius: .3rem;
+    font-size: .8rem;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-family: 'Exo 2', sans-serif;
+    &--normal{
+        background: rgb(148, 148, 148);
+    }
+    &--fighting{
+        background: rgb(255, 115, 0);
+
+    }
+    &--flying{
+        background: rgb(155, 165, 255);
+    }
+    &--poison{
+        background: rgb(174, 0, 255);
+
+    }
+    &--ground{
+        background: rgb(156, 79, 79);
+
+    }
+    &--rock{
+        background: rgb(71, 91, 117);
+
+    }
+    &--bug{
+        background: rgb(94, 255, 0);
+
+    }
+    &--ghost{
+        background: rgb(41, 41, 41);
+
+    }
+    &--steel{
+        background: rgb(88, 81, 81);
+
+    }
+    &--fire{
+        background: rgb(255, 0, 0);
+
+    }
+    &--water{
+        background: rgb(25, 0, 255);
+
+    }
+    &--grass{
+        background: green;
+
+    }
+    &--electric{
+        background: rgb(251, 255, 0);
+
+    }
+    &--psychic{
+        background: rgb(255, 0, 157);
+
+    }
+    &--ice{
+        background: rgb(0, 195, 255);
+
+    }
+    &--dragon{
+        background: rgb(192, 70, 0);
+
+    }
+    &--dark{
+        background: rgb(8, 8, 8);
+
+    }
+    &--fairy{
+        background: rgb(255, 77, 145);
+
+    }
+    &--unknown{
+        background: rgb(255, 255, 255);
+
+    }
+    &--shadow{
+        background: rgb(56, 50, 50);
+
+    }
+}

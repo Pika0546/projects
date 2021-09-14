@@ -1,0 +1,30 @@
+.header{
+    position: relative;
+   
+    padding: 3rem;
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 35%;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .header{
+        img{
+            width: 80%;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 320px){
+    .header{
+        img{
+            width: 100%;
+        }
+    }
+    
+}

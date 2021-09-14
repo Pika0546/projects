@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+  
+display: flex;
+justify-content: center;
+}
+
+input{
+    outline: none;
+    border: none;
+}
+
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.app{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: linear-gradient(45deg, #2f2f2f 25%, #323232 25%, #323232 50%, #2f2f2f 50%, #2f2f2f 75%, #323232 75%, #323232 100%);
+    background-size: 70.71px 70.71px;
+    padding: 0 3rem;
+    padding-bottom: 3rem;
+    max-width: 1400px;
+    min-height: 100vh;
+    /* position: relative; */
+}
+
+main{
+    padding: 0 4rem;
+    background-image: linear-gradient(136deg, #f5f5f5 20.93%, #ffffff 20.93%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 70.93%, #ffffff 70.93%, #ffffff 100%);
+    background-size: 61.90px 59.78px;
+   
+}
+
+.main{
+    padding: 4rem 0;
+    padding-bottom: 1rem;
+    background: white;
+    min-height: 20rem;
+}
+
+@media screen and (max-width: 767px){
+    .app{
+        padding: 0 1rem;
+    }
+    main{
+        padding: 0 2rem;
+    }
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@keyframes moveUpDown {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.card{
+    background: white;
+    overflow: hidden;
+    border-radius: 1rem;
+    // transition: .5s;
+    // cursor: pointer; 
+    &:hover{
+        // transform: translateY(-2rem);
+        animation: moveUpDown .5s linear 1;
+    }
+    &__id{
+        padding-left: 1rem;
+        font-family: 'Passion One', cursive;
+        color: #bebebe;
+    }
+    &__img{
+        width: 100%;
+        padding: 2rem 0;
+        background: #F2F2F2;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__title{
+        font-family: 'Titillium Web', sans-serif;
+        padding-left: 1rem;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    }
+    &__types{
+        padding-top: .5rem;
+        padding-left: 1rem;
+    }
+    
+}

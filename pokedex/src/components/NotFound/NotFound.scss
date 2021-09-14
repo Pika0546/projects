@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
+.err{
+  
+    &__content{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    &__img{
+        min-width: 10rem;
+        max-width: 10rem;
+        height: 10rem;
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }   
+    &__text{
+       
+        font-size: 1.3rem;
+        font-family: 'Chakra Petch', sans-serif;
+        
+    }
+}
